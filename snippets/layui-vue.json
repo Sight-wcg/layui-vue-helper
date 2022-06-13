@@ -1,0 +1,430 @@
+{
+  "layui-vue徽章": {
+    "prefix": "lay-badge",
+    "body": [
+      "<lay-badge type=\"${1|dot,rim|}\" theme=\"${2|orange,green,cyan,blue,black,gray|}\" ${3| ,ripple|}></lay-badge>"
+    ],
+    "description": "layui-vue徽章"
+  },
+  "layui-vue引用": {
+    "prefix": "lay-quote",
+    "body": ["<lay-quote ${1| ,type=\"nm\"|}>${2}</lay-quote>"],
+    "description": "layui-vue引用"
+  },
+  "layui-vue分割线": {
+    "prefix": "lay-line",
+    "body": [
+      "<lay-line ",
+      "  direction=\"${1|horizontal,vertical|}\" ",
+      "  theme=\"${2|red,orange,green,cyan,blue,black,gray,#EEF08D|}\"",
+      "  content-position=\"${3|center,left,right|}\"",
+      "  border-style=\"${4|solid,dotted,dashed,double,groove,ridge,inset,outset|}\"",
+      "  >",
+      "  ${5}",
+      "</lay-line>"
+    ],
+    "description": "layui-vue分割线,border-style参见MDNhttps"
+  },
+  "layui-vue字段": {
+    "prefix": "lay-field",
+    "body": ["<lay-field title=\"${1}\">${2}</lay-field>"],
+    "description": "layui-vue字段"
+  },
+  "layui-vue文字提示": {
+    "prefix": "lay-tooltip",
+    "body": ["<lay-tooltip content=\"${1}\" position=\"${2|top,bottom,left,right|}\">", "    ${3}", "  </lay-tooltip>"],
+    "description": "layui-vue文字提示"
+  },
+  "layui-vue分步": {
+    "prefix": "lay-step",
+    "body": [
+      "<lay-step :active=\"${1}\" composition=\"${2|default,row|}\" direction=\"${3|horizontal,vertical|}\" on-change=\"${4}\">",
+      "  <lay-step-item title=\"${5}\" content=\"${6}\"></lay-step-item>",
+      "</lay-step>"
+    ],
+    "description": "layui-vue分步"
+  },
+  "layui-vue分步item": {
+    "prefix": "lay-step-item",
+    "body": [
+      "<lay-step-item title=\"${1}\" content=\"${2}\" status=\"${3|primary,success,fail,warning|}\"></lay-step-item>"
+    ],
+    "description": "layui-vue分步item"
+  },
+  "layui-vue分割面板": {
+    "prefix": "lay-split-panel",
+    "body": [
+      "<lay-split-panel vertical=\"${1|false,true|}\">",
+      "  <lay-split-panel-item :space=\"${2:30}\">1</lay-split-panel-item>",
+      "  <lay-split-panel-item :space=\"${3:30}\">2</lay-split-panel-item>",
+      "  <lay-split-panel-item :space=\"${4:40}\">3</lay-split-panel-item>",
+      "</lay-split-panel>"
+    ],
+    "description": "layui-vue分割面板,itemspace属性合计100"
+  },
+  "layui-vue异常": {
+    "prefix": "lay-exception",
+    "body": [
+      "<lay-exception status=\"${1|403,404,500|}\" title=\"${1}\" describe=\"${2:描述信息}\">",
+      "  <template #extra>",
+      "    <lay-button>刷新</lay-button>",
+      "    <lay-button type=\"primary\">返回</lay-button>",
+      "  </template>",
+      "</lay-exception>"
+    ],
+    "description": "layui-vue异常"
+  },
+  "layui-vue结果": {
+    "prefix": "lay-result",
+    "body": [
+      "<lay-result status=\"${1|success,failure|}\">",
+      "  <template #content>",
+      "    ${2:内容插槽}",
+      "  </template>",
+      "  <template #extra>",
+      "    <lay-button>返回首页</lay-button>",
+      "  </template>",
+      "</lay-result>"
+    ],
+    "description": "layui-vue结果"
+  },
+  "layui-vue虚拟滚动": {
+    "prefix": "lay-scroll",
+    "body": [
+      "<lay-scroll height=\"${1:200px}\" thumbWidth=\"${2}\" thumbColor=\"${3}\" trackColor=\"${4}\">",
+      " ${5}",
+      "</lay-scroll>"
+    ],
+    "description": "layui-vue虚拟滚动"
+  },
+  "layui-vue通告栏": {
+    "prefix": "lay-notice-bar",
+    "body": [
+      "<lay-notice-bar text=\"${1}\" mode=\"${2|link,closeable|}\" leftIcon=\"layui-icon-mute\" rightIcon=\"layui-icon-close\"></lay-notice-bar>"
+    ],
+    "description": "layui-vue通告栏"
+  },
+  "laui-vue按钮": {
+    "prefix": "lay-button",
+    "body": ["<lay-button type=\"${1|primary,normal,warm,danger|}\" size=\"${2|lg,sm,xs|}\">$3</lay-button>", "$4"],
+    "description": "LayuiVue<lay-button>"
+  },
+  "layui-vue按钮组": {
+    "prefix": "lay-button-group",
+    "body": [
+      "<lay-button-group>",
+      "  <lay-button type=\"${1|primary,normal,warm,danger|}\" size=\"${2|lg,sm,xs|}\">$3</lay-button>",
+      "  <lay-button type=\"${4|primary,normal,warm,danger|}\" size=\"${5|lg,sm,xs|}\">$6</lay-button>",
+      "</lay-button-group>",
+      "$7"
+    ],
+    "description": "layui-vue按钮组"
+  },
+  "layui-vue按钮容器": {
+    "prefix": "lay-button-container",
+    "body": [
+      "<lay-button-container>",
+      "  <lay-button type=\"${1|primary,normal,warm,danger|}\" size=\"${2|lg,sm,xs|}\">$3</lay-button>",
+      "  <lay-button type=\"${4|primary,normal,warm,danger|}\" size=\"${5|lg,sm,xs|}\">$6</lay-button>",
+      "</lay-button-container>",
+      "$7"
+    ],
+    "description": "layui-vue按钮容器,按扭之间自动添加间距"
+  },
+  "layui-vue图标": {
+    "prefix": "lay-icon",
+    "body": ["<lay-icon type=\"${1}\" color=\"${2|red,orange,green,cyan,blue,black|}\"></lay-icon>", "$3"],
+    "description": "layui-vue图标"
+  },
+  "layui-vue过渡": {
+    "prefix": "lay-transition",
+    "body": ["<lay-transition type=\"${1|collapse,fade|}\">$2</lay-transition>"],
+    "description": "layui-vue过渡"
+  },
+  "layui-vue全屏": {
+    "prefix": "lay-fullscreen",
+    "body": [
+      "<lay-fullscreen v-slot=\"{ enter, exit, toggle, isFullscreen }\" @fullscreenchange=\"${1}\">",
+      "  <lay-button @click=\"toggle()\">{{isFullscreen ? \"退出\" : \"进入全屏\"}}</lay-button>",
+      "</lay-fullscreen>"
+    ],
+    "description": "layui-vue全屏"
+  },
+  "layui-vue水波纹": {
+    "prefix": "lay-ripple",
+    "body": ["<lay-ripple type=\"${1|inset,out|}\" trigger=\"${2|click,always,mouseenter|}\">", "$3", "</lay-ripple>"],
+    "description": "layui-vue水波纹"
+  },
+  "layui-vuexiansh": {
+    "prefix": "lay-progress",
+    "body": [
+      "lay-timeline",
+      "lay-collapse",
+      "lay-table",
+      "lay-avatar",
+      "lay-empty",
+      "lay-page",
+      "lay-tree",
+      "lay-transfer",
+      "lay-carousel",
+      "lay-count-up"
+    ],
+    "description": "layui-vue开关"
+  },
+  "layui-vue开关": {
+    "prefix": "lay-switch",
+    "body": [
+      "<lay-switch ",
+      "  v-model=\"${1}\"",
+      "  active-text=\"${2}\"",
+      "  inactive-text=\"${3}\"",
+      "  onswitch-value=\"${4}\"",
+      "  unswitch-value=\"${5}\"",
+      "  @change=\"${6}\"",
+      ">",
+      "  <template #onswitch-icon>😄</template>",
+      "  <template #unswitch-icon>🤔</template>",
+      "</lay-switch>"
+    ],
+    "description": "###layui-vue开关"
+  },
+  "layui-vue复选框": {
+    "prefix": "lay-checkbox",
+    "body": [
+      "<lay-checkbox name=\"${1:原生属性名}\" v-model=\"${2}\" skin=\"${3:primary}\" label=\"${4}\" @change=\"${5}\" >${6:复选框名}</lay-checkbox>"
+    ],
+    "description": "layui-vue复选框"
+  },
+  "layui-vue复选框组": {
+    "prefix": "lay-checkbox-group",
+    "body": [
+      "<lay-checkbox-group v-model=\"${1}\" @change=\"${2}\">",
+      "  <lay-checkbox name=\"${3}\" skin=\"${4:primary}\" label=\"${5}\">${6}</lay-checkbox>",
+      "</lay-checkbox-group>"
+    ],
+    "description": "layui-vue复选框组"
+  },
+  "layui-vue单选框": {
+    "prefix": "lay-radio",
+    "body": ["<lay-radio v-model=\"${1}\" name=\"${2}\" label=\"${3}\" @change=\"${4}\">${5}</lay-radio>"],
+    "description": "layui-vue单选框"
+  },
+  "layui-vue单选框组": {
+    "prefix": "lay-radio-group",
+    "body": [
+      "<lay-radio-group name=\"${1}\" v-model=\"${2}\" @change=\"${3}\">",
+      "  <lay-radio label=\"${4}\">${5}</lay-radio>",
+      "</lay-radio-group>"
+    ],
+    "description": "layui-vue单选框组"
+  },
+  "layui-vue输入框": {
+    "prefix": "lay-input",
+    "body": [
+      "<lay-input v-model=\"${1}\" allow-clear=\"${2|true,false|}\"  placeholder=\"${3}\" @${4|input,foucs,blur,change,clear|}=\"${5}\"></lay-input>"
+    ],
+    "description": "layui-vue输入框"
+  },
+  "layui-vue数字输入框": {
+    "prefix": "lay-input-number",
+    "body": [
+      "<lay-input-number v-model=\"${1}\" size=\"${2|md,sm,xs|}\" :min=\"${3}\" :max=\"${4}\" position=\"${5:right}\" @change=\"${6}\"></lay-input-number>"
+    ],
+    "description": "layui-vue数字输入框"
+  },
+  "layui-vue文本域": {
+    "prefix": "lay-textarea",
+    "body": ["<lay-textarea v-model=\"${1}\" placeholder=\"${2}\" @${3|input,foucs,blur|}=\"${4}\"></lay-textarea>"],
+    "description": "layui-vue文本域"
+  },
+  "layui-vue下拉选择框": {
+    "prefix": "lay-select",
+    "body": [
+      "<lay-select v-model=\"${1}\" @change=\"${2}\">",
+      "  <lay-select-option value=\"${3}\" label=\"${4}\"></lay-select-option>",
+      "</lay-select>"
+    ],
+    "description": "layui-vue下拉选择框"
+  },
+  "layui-vue下拉选择框option": {
+    "prefix": "lay-select-option",
+    "body": ["<lay-select-option value=\"${1}\" label=\"${2}\"></lay-select-option>"],
+    "description": "layui-vue下拉选择框option"
+  },
+  "layui-vue颜色选择器": {
+    "prefix": "lay-color-picker",
+    "body": ["<lay-color-picker v-model=\"${1}\" preset=\"${2}\"></lay-color-picker>"],
+    "description": "layui-vue颜色选择器"
+  },
+  "layui-vue日期选择器": {
+    "prefix": "lay-date-picker",
+    "body": [
+      "<lay-date-picker v-model=\"${1}\" type=\"${2|date,datetime,year,month,time,yearmonth|}\" simple></lay-date-picker>"
+    ],
+    "description": "layui-vue日期选择器"
+  },
+  "layui-vue上传": {
+    "prefix": "lay-upload",
+    "body": [
+      "<lay-upload @done=\"${1}\" @choose=\"${2}\">",
+      "  <template #preview>",
+      "    ${3}",
+      "  </template>",
+      "</lay-upload>"
+    ],
+    "description": "layui-vue上传"
+  },
+  "layui-vue图标选择器": {
+    "prefix": "lay-icon-picker",
+    "body": [
+      "<lay-icon-picker v-model=\"${1}\" type=\"${2:layui-icon-face-smile}\" ${4| ,page|} ${5| ,show-search|}></lay-icon-picker>"
+    ],
+    "description": "layui-vue图标选择器"
+  },
+  "layui-vue评分": {
+    "prefix": "lay-rate",
+    "body": [
+      "<lay-rate v-model=\"${1}\" :text=\"${2|true,false|}\" :half=\"${3|true,false|}\" :is-block=\"${4|true,false|}\" theme=\"#1E9FFF\"></lay-rate>"
+    ],
+    "description": "layui-vue评分"
+  },
+  "layui-vue滑块": {
+    "prefix": "lay-slider",
+    "body": [
+      "<lay-slider v-model=\"${1}\" :showDots=\"${2|true,false|}\" :step=\"${3:10}\" :max=\"${4:100}\"></lay-slider>"
+    ],
+    "description": "layui-vue滑块"
+  },
+  "layui-vue表单": {
+    "prefix": "lay-form",
+    "body": [
+      "<lay-form :model=\"${1}\">",
+      "  <lay-form-item label=\"${2}\" prop=\"${3}\">",
+      "    <lay-input v-model=\"${1}.\"></lay-input>",
+      "  </lay-form-item>",
+      "</lay-form>"
+    ],
+    "description": "layui-vue表单"
+  },
+  "layui-vue表单item": {
+    "prefix": "lay-form-item",
+    "body": [
+      "<lay-form-item label=\"${1}\" prop=\"${2}\" :label-position=\"${3|left,top,right|}\">",
+      "${4}",
+      "</lay-form-item>"
+    ],
+    "description": "layui-vue表单item"
+  },
+  "layui-vue容器": {
+    "prefix": "lay-container",
+    "body": ["<lay-container ${1:fluid}>", " ${2}", "</lay-container>"],
+    "description": "layui-vue容器"
+  },
+  "layui-vue栅格row": {
+    "prefix": "lay-row",
+    "body": [
+      "<lay-row space=\"${1}\">",
+      "  <lay-col xs=\"${2:3}\" sm=\"${3:6}\" md=\"${4:12}\" lg=\"${5:24}\">",
+      "    ${6}",
+      "  </lay-col>",
+      "</lay-row>"
+    ],
+    "description": "layui-vue栅格"
+  },
+  "layui-vue栅格col": {
+    "prefix": "lay-col",
+    "body": ["<lay-col xs=\"${1:3}\" sm=\"${2:6}\" md=\"${3:12}\" lg=\"${4:24}\"></lay-col>"],
+    "description": "layui-vue栅格"
+  },
+  "layui-vue面板": {
+    "prefix": "lay-panel",
+    "body": [
+      "<lay-panel shadow=\"${1|always,hover,never|}\">",
+      "  <div style=\"padding: 30px;\">面板</div>",
+      "</lay-panel>"
+    ],
+    "description": "layui-vue面板"
+  },
+  "layui-vue卡片": {
+    "prefix": "lay-card",
+    "body": [
+      "<lay-card title=\"${1}\" shadow=\"${2|always,hover,never|}\">",
+      "  <template v-slot:title>",
+      "    ${3}",
+      "  </template>",
+      "  <template v-slot:extra>",
+      "    ${4}",
+      "  </template>",
+      "  <template v-slot:body>",
+      "    ${5}",
+      "  </template>",
+      "</lay-card>"
+    ],
+    "description": "layui-vue卡片"
+  },
+  "layui-vue骨架屏": {
+    "prefix": "lay-skeleton",
+    "body": [
+      "<lay-skeleton type=\"${1|p,image|}\" :loading=\"${2|true,false|}\" :rows=\"${3}\" animated></lay-skeleton>"
+    ],
+    "description": "layui-vue骨架屏"
+  },
+  "layui-vue菜单": {
+    "prefix": "lay-menu",
+    "body": [
+      "<lay-menu v-model:selectedKey=\"${1}\" v-model:openKeys=\"${2}\">",
+      "  <lay-menu-item id=\"1\">首页</lay-menu-item>",
+      "  <lay-sub-menu id=\"2\">",
+      "    <template #title>",
+      "      首页",
+      "    </template>",
+      "    <lay-menu-item id=\"3\">首页</lay-menu-item>",
+      "  </lay-sub-menu>",
+      "</lay-menu>"
+    ],
+    "description": "layui-vue菜单"
+  },
+  "layui-vue面包屑": {
+    "prefix": "lay-breadcrumb",
+    "body": [
+      "<lay-breadcrumb ${1| ,separator=\"\"|}>",
+      "  <lay-breadcrumb-item title=\"${2}\"></lay-breadcrumb-item>",
+      "  <lay-breadcrumb-item title=\"${3}\"></lay-breadcrumb-item>",
+      "</lay-breadcrumb>"
+    ],
+    "description": "layui-vue面包屑"
+  },
+  "layui-vue选项卡": {
+    "prefix": "lay-tab",
+    "body": [
+      "<lay-tab v-model=\"${1}\" type=\"${2| ,brief,card|}\" tab-position=\"${3|top,bottom,left,right|}\">",
+      "  <lay-tab-item title=\"${4:选项一}\" id=\"${5:1}\">",
+      "    ${6}",
+      "  </lay-tab-item>",
+      "</lay-tab>"
+    ],
+    "description": "layui-vue选项卡"
+  },
+  "layui-vue下拉菜单": {
+    "prefix": "lay-dropdown",
+    "body": [
+      "<lay-dropdown trigger=\"${1|click,hover,contextMenu|}\">",
+      "  <lay-button>下拉菜单</lay-button>",
+      "  <template #content>",
+      "    <lay-dropdown-menu>",
+      "      <lay-dropdown-menu-item>选项一</lay-dropdown-menu-item>",
+      "      <lay-dropdown-menu-item>选项二</lay-dropdown-menu-item>",
+      "    </lay-dropdown-menu>",
+      "  </template>",
+      "</lay-dropdown>"
+    ],
+    "description": "layui-vue下拉菜单"
+  },
+  "layui-vue返回顶部": {
+    "prefix": "lay-backtop",
+    "body": [
+      "<lay-backtop :show-height=\"${1:100}\" :bottom=\"${2:100}\" ${3:bgcolor=\"#5FB878\"} ${4| ,circle|}></lay-backtop>"
+    ],
+    "description": "layui-vue返回顶部"
+  }
+}

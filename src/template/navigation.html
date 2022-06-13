@@ -1,0 +1,53 @@
+<!--  
+  @name: layui-vue 菜单
+  @prefix:lay-menu
+  @description: layui-vue 菜单
+-->
+<lay-menu v-model:selectedKey="${1}" v-model:openKeys="${2}">
+  <lay-menu-item id="1">首页</lay-menu-item>
+  <lay-sub-menu id="2">
+    <template #title>
+      首页
+    </template>
+    <lay-menu-item id="3">首页</lay-menu-item>
+  </lay-sub-menu>
+</lay-menu>
+<!--  
+  @name: layui-vue 面包屑
+  @prefix:lay-breadcrumb
+  @description: layui-vue 面包屑
+-->
+<lay-breadcrumb ${1| ,separator=""|}>
+  <lay-breadcrumb-item title="${2}"></lay-breadcrumb-item>
+  <lay-breadcrumb-item title="${3}"></lay-breadcrumb-item>
+</lay-breadcrumb>
+<!--  
+  @name: layui-vue 选项卡
+  @prefix:lay-tab
+  @description: layui-vue 选项卡
+-->
+<lay-tab v-model="${1}" type="${2| ,brief,card|}" tab-position="${3|top,bottom,left,right|}">
+  <lay-tab-item title="${4:选项一}" id="${5:1}">
+    ${6}
+  </lay-tab-item>
+</lay-tab>
+<!--  
+  @name: layui-vue 下拉菜单
+  @prefix:lay-dropdown
+  @description: layui-vue 下拉菜单
+-->
+<lay-dropdown trigger="${1|click,hover,contextMenu|}">
+  <lay-button>下拉菜单</lay-button>
+  <template #content>
+    <lay-dropdown-menu>
+      <lay-dropdown-menu-item>选项一</lay-dropdown-menu-item>
+      <lay-dropdown-menu-item>选项二</lay-dropdown-menu-item>
+    </lay-dropdown-menu>
+  </template>
+</lay-dropdown>
+<!--  
+  @name: layui-vue 返回顶部
+  @prefix:lay-backtop
+  @description: layui-vue 返回顶部
+-->
+<lay-backtop :show-height="${1:100}" :bottom="${2:100}" ${3:bgcolor="#5FB878"} ${4| ,circle|}></lay-backtop>

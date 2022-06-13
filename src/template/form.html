@@ -1,0 +1,134 @@
+<!--  
+  @name: layui-vue 开关
+  @prefix:lay-switch
+  @description: ### layui-vue 开关
+-->
+<lay-switch 
+  v-model="${1}"
+  active-text="${2}"
+  inactive-text="${3}"
+  onswitch-value="${4}"
+  unswitch-value="${5}"
+  @change="${6}"
+>
+  <template #onswitch-icon>😄</template>
+  <template #unswitch-icon>🤔</template>
+</lay-switch>
+<!--  
+  @name: layui-vue 复选框
+  @prefix: lay-checkbox
+  @description: layui-vue 复选框
+-->
+<lay-checkbox name="${1:原生属性名}" v-model="${2}" skin="${3:primary}" label="${4}" @change="${5}" >${6:复选框名}</lay-checkbox>
+<!--  
+  @name: layui-vue 复选框组
+  @prefix: lay-checkbox-group
+  @description: layui-vue 复选框组
+-->
+<lay-checkbox-group v-model="${1}" @change="${2}">
+  <lay-checkbox name="${3}" skin="${4:primary}" label="${5}">${6}</lay-checkbox>
+</lay-checkbox-group>
+<!--  
+  @name: layui-vue 单选框
+  @prefix: lay-radio
+  @description: layui-vue 单选框
+-->
+<lay-radio v-model="${1}" name="${2}" label="${3}" @change="${4}">${5}</lay-radio>
+<!--  
+  @name: layui-vue 单选框组
+  @prefix: lay-radio-group
+  @description: layui-vue 单选框组
+-->
+<lay-radio-group name="${1}" v-model="${2}" @change="${3}">
+  <lay-radio label="${4}">${5}</lay-radio>
+</lay-radio-group>
+<!--  
+  @name: layui-vue 输入框
+  @prefix: lay-input
+  @description: layui-vue 输入框
+-->
+<lay-input v-model="${1}" allow-clear="${2|true,false|}"  placeholder="${3}" @${4|input,foucs,blur,change,clear|}="${5}"></lay-input>
+<!--  
+  @name: layui-vue 数字输入框
+  @prefix: lay-input-number
+  @description: layui-vue 数字输入框
+-->
+<lay-input-number v-model="${1}" size="${2|md,sm,xs|}" :min="${3}" :max="${4}" position="${5:right}" @change="${6}"></lay-input-number>
+<!--  
+  @name: layui-vue 文本域
+  @prefix: lay-textarea
+  @description: layui-vue 文本域
+-->
+<lay-textarea v-model="${1}" placeholder="${2}" @${3|input,foucs,blur|}="${4}"></lay-textarea>
+<!--  
+  @name: layui-vue 下拉选择框
+  @prefix: lay-select
+  @description: layui-vue 下拉选择框
+-->
+<lay-select v-model="${1}" @change="${2}">
+  <lay-select-option value="${3}" label="${4}"></lay-select-option>
+</lay-select>
+<!--  
+  @name: layui-vue 下拉选择框 option
+  @prefix: lay-select-option
+  @description: layui-vue 下拉选择框 option
+-->
+<lay-select-option value="${1}" label="${2}"></lay-select-option>
+<!--  
+  @name: layui-vue 颜色选择器
+  @prefix: lay-color-picker
+  @description: layui-vue 颜色选择器
+-->
+<lay-color-picker v-model="${1}" preset="${2}"></lay-color-picker>
+<!--  
+  @name: layui-vue 日期选择器
+  @prefix: lay-date-picker
+  @description: layui-vue 日期选择器
+-->
+<lay-date-picker v-model="${1}" type="${2|date,datetime,year,month,time,yearmonth|}" simple></lay-date-picker>
+<!--  
+  @name: layui-vue 上传
+  @prefix: lay-upload
+  @description: layui-vue 上传
+-->
+<lay-upload @done="${1}" @choose="${2}">
+  <template #preview>
+    ${3}
+  </template>
+</lay-upload>
+<!--  
+  @name: layui-vue 图标选择器
+  @prefix: lay-icon-picker
+  @description: layui-vue 图标选择器
+-->
+<lay-icon-picker v-model="${1}" type="${2:layui-icon-face-smile}" ${4| ,page|} ${5| ,show-search|}></lay-icon-picker>
+<!--  
+  @name: layui-vue 评分
+  @prefix: lay-rate
+  @description: layui-vue 评分
+-->
+<lay-rate v-model="${1}" :text="${2|true,false|}" :half="${3|true,false|}" :is-block="${4|true,false|}" theme="#1E9FFF"></lay-rate>
+<!--  
+  @name: layui-vue 滑块
+  @prefix: lay-slider
+  @description: layui-vue 滑块
+-->
+<lay-slider v-model="${1}" :showDots="${2|true,false|}" :step="${3:10}" :max="${4:100}"></lay-slider>
+<!--  
+  @name: layui-vue 表单
+  @prefix: lay-form
+  @description: layui-vue 表单
+-->
+<lay-form :model="${1}">
+  <lay-form-item label="${2}" prop="${3}">
+    <lay-input v-model="${1}."></lay-input>
+  </lay-form-item>
+</lay-form>
+<!--  
+  @name: layui-vue 表单 item
+  @prefix: lay-form-item
+  @description: layui-vue 表单 item
+-->
+<lay-form-item label="${1}" prop="${2}" :label-position="${3|left,top,right|}">
+${4}
+</lay-form-item>

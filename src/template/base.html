@@ -1,0 +1,56 @@
+<!--  
+  @name: laui-vue 按钮
+  @prefix: lay-button
+  @description: Layui Vue <lay-button>
+-->
+<lay-button type="${1|primary,normal,warm,danger|}" size="${2|lg,sm,xs|}">$3</lay-button>
+$4
+<!--  
+  @name: layui-vue 按钮组
+  @prefix: lay-button-group
+  @description: layui-vue 按钮组
+-->
+<lay-button-group>
+  <lay-button type="${1|primary,normal,warm,danger|}" size="${2|lg,sm,xs|}">$3</lay-button>
+  <lay-button type="${4|primary,normal,warm,danger|}" size="${5|lg,sm,xs|}">$6</lay-button>
+</lay-button-group>
+$7
+<!--  
+  @name: layui-vue 按钮容器
+  @prefix: lay-button-container
+  @description: layui-vue 按钮容器,按扭之间自动添加间距
+-->
+<lay-button-container>
+  <lay-button type="${1|primary,normal,warm,danger|}" size="${2|lg,sm,xs|}">$3</lay-button>
+  <lay-button type="${4|primary,normal,warm,danger|}" size="${5|lg,sm,xs|}">$6</lay-button>
+</lay-button-container>
+$7
+<!--  
+  @name: layui-vue 图标
+  @prefix: lay-icon
+  @description: layui-vue 图标
+-->
+<lay-icon type="${1}" color="${2|red,orange,green,cyan,blue,black|}"></lay-icon>
+$3
+<!--  
+  @name: layui-vue 过渡
+  @prefix: lay-transition
+  @description: layui-vue 过渡
+-->
+<lay-transition type="${1|collapse,fade|}">$2</lay-transition>
+<!--  
+  @name: layui-vue 全屏
+  @prefix: lay-fullscreen
+  @description: layui-vue 全屏
+-->
+<lay-fullscreen v-slot="{ enter, exit, toggle, isFullscreen }" @fullscreenchange="${1}">
+  <lay-button @click="toggle()">{{isFullscreen ? "退出" : "进入全屏"}}</lay-button>
+</lay-fullscreen>
+<!--  
+  @name: layui-vue 水波纹
+  @prefix: lay-ripple
+  @description: layui-vue 水波纹
+-->
+<lay-ripple type="${1|inset,out|}" trigger="${2|click,always,mouseenter|}">
+$3
+</lay-ripple>

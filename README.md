@@ -1,8 +1,28 @@
 # layui-vue-helper README
 
-This is the README for your extension "layui-vue-helper". After writing up a brief description, we recommend including the following sections.
+layui-vue-helper is a development enhancement tool for Layui Vue developers.
 
 ## Features
+
+### Snippets
+#### Manual Install
+
+Go to the git and download the snippets folder, then copy the files in the folder to the path directly:
+- Mac: /Users/< your-user-name >/Library/Application Support/Code/User/snippets/
+- Windows: < your-installed-driver > :\Users\ < your-user-name > \AppData\Roaming\Code\User\snippets\
+
+#### Through VS Code Extensions
+
+- From website: Go to Visual Studio Code Marketplace, and search 'layui-vue-helper', then click the install button.
+- From VS Code: click extensions sidebar, and search 'layui-vue-helper', then click the install button.
+
+### Autocomplete
+
+> TODO
+
+### Document Hover Tips
+
+> TODO
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
@@ -61,6 +81,9 @@ Ensure that you've read through the extensions guidelines and follow the best pr
 * Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
 * Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
 * Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+
+### Contribution
+If you want to help improve this project, Please fork and initiate. a pull request after you fix some bugs or finished some new features. Your pull request will make layui-vue-helper better.
 
 ### For more information
 

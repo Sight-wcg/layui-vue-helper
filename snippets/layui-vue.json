@@ -155,21 +155,102 @@
     "body": ["<lay-ripple type=\"${1|inset,out|}\" trigger=\"${2|click,always,mouseenter|}\">", "$3", "</lay-ripple>"],
     "description": "layui-vue水波纹"
   },
-  "layui-vuexiansh": {
+  "layui-vue进度": {
     "prefix": "lay-progress",
     "body": [
-      "lay-timeline",
-      "lay-collapse",
-      "lay-table",
-      "lay-avatar",
-      "lay-empty",
-      "lay-page",
-      "lay-tree",
-      "lay-transfer",
-      "lay-carousel",
-      "lay-count-up"
+      "<lay-progress percent=\"${1}\" size=\"${2| ,big|}\" theme=\"${3|orange,green,cyan,blue,black,gray|\" :show-text=\"${4|true,false|}\" text=\"${5}\"></lay-progress>"
     ],
-    "description": "layui-vue开关"
+    "description": "layui-vue进度"
+  },
+  "layui-vue时间线": {
+    "prefix": "lay-timeline",
+    "body": [
+      "<lay-timeline direction=\"${1|vertical,horizontal|}\">",
+      "  <lay-timeline-item title=\"${2}\" ${3| ,simple|}>${4}</lay-timeline-item>",
+      "</lay-timeline>"
+    ],
+    "description": "layui-vue时间线"
+  },
+  "layui-vue折叠面板": {
+    "prefix": "lay-collapse",
+    "body": [
+      "<lay-collapse v-model=\"${1}\" ${2| ,accordion} change=\"${3}\">",
+      "  <lay-collapse-item title=\"${4}\" id=\"${5}\">",
+      "     ${6}",
+      "  </lay-collapse-item>",
+      "</lay-collapse>"
+    ],
+    "description": "layui-vue进度"
+  },
+  "layui-vue表格": {
+    "prefix": "lay-table",
+    "body": [
+      "<lay-table ",
+      "  :columns=\"${1}\" ",
+      "  :data-source=\"${2}\" ",
+      "  v-model:selectedKeys=\"${3}\"",
+      "  checkbox=\"${4|true,false|}\" ",
+      "  default-toolbar=\"${5|true,false|}\"",
+      "  size=\"${6|lg,md,sm|}\" ",
+      "  :page=\"${7}\" ",
+      "  @change=\"${8}\">",
+      "</lay-table>"
+    ],
+    "description": "layui-vue进度"
+  },
+  "layui-vue头像": {
+    "prefix": "lay-avatar",
+    "body": ["<lay-avatar :src=\"${1}\" size=\"${2|xs,sm,lg|}\" ${3| ,radius|}></lay-avatar>"],
+    "description": "layui-vue进度"
+  },
+  "layui-vue空": {
+    "prefix": "lay-empty",
+    "body": [
+      "<lay-empty description=\"${1}\">",
+      "  <template #${2|extra,image|}>",
+      "    ${3}",
+      "  </template>",
+      "</lay-empty>"
+    ],
+    "description": "layui-vue进度"
+  },
+  "layui-vue分页": {
+    "prefix": "lay-page",
+    "body": [
+      "<lay-page v-model=\"${1}\" :limit=\"${2}\" @limit=\"${3}\" :total=\"${4}\" :show-page=\"${5|true,false|}\" :show-limit=\"${6|true,false|}\"></lay-page>"
+    ],
+    "description": "layui-vue进度"
+  },
+  "layui-vue树": {
+    "prefix": "lay-tree",
+    "body": [
+      "<lay-tree :data=\"${1}\" v-model:checkedKeys=\"${2}\" :showCheckbox=\"${3|true,false|}\" ${4| ,collapse-transition|} @node-click=\"${5}\">",
+      "</lay-tree>"
+    ],
+    "description": "layui-vue进度"
+  },
+  "layui-vue穿梭框": {
+    "prefix": "lay-transfer",
+    "body": ["<lay-transfer :data-source=\"${1}\" title=\"${2}\" :show-search=\"${3|true,false|}\"></lay-transfer>"],
+    "description": "layui-vue进度"
+  },
+  "layui-vue轮播": {
+    "prefix": "lay-carousel",
+    "body": [
+      "<lay-carousel v-model=\"${1}\" anim=\"${2| ,updown|}\" indicator=\"${3|inside,outside,none|}\" arrow=\"{4|hover,always,none|}\" :autoplay=\"${5|true,false|}\" interval=\"${6}\">",
+      "  <lay-carousel-item v-for=\"${7} in ${7}\" :id=\"${7}.id\">",
+      "    <div>{{${7}.text }}</div>",
+      "  </lay-carousel-item>",
+      "</lay-carousel>"
+    ],
+    "description": "layui-vue进度"
+  },
+  "layui-vue数字滚动": {
+    "prefix": "lay-count-up",
+    "body": [
+      "<lay-count-up :startVal=\"${1:0}\" :endVal=\"${2}\" :decimal-places=\"${3:0}\" :use-grouping=\"${4|true,false|}\" prefix=\"${5}\" suffix=\"${6}\"></lay-count-up>"
+    ],
+    "description": "layui-vue进度"
   },
   "layui-vue开关": {
     "prefix": "lay-switch",
@@ -259,7 +340,7 @@
   "layui-vue日期选择器": {
     "prefix": "lay-date-picker",
     "body": [
-      "<lay-date-picker v-model=\"${1}\" type=\"${2|date,datetime,year,month,time,yearmonth|}\" simple></lay-date-picker>"
+      "<lay-date-picker v-model=\"${1}\" type=\"${2|date,datetime,year,month,time,yearmonth|}\" ${3| ,simple|}></lay-date-picker>"
     ],
     "description": "layui-vue日期选择器"
   },
@@ -314,6 +395,64 @@
       "</lay-form-item>"
     ],
     "description": "layui-vue表单item"
+  },
+  "layui-vue弹层": {
+    "prefix": "lay-layer",
+    "body": [
+      "<lay-layer ",
+      "  title=\"${1}\" ",
+      "  type=\"${2|page,iframe,drawer|}\"",
+      "  v-model=\"${3}\" ",
+      "  shade=\"${4|true,false|}\" ",
+      "  resize=\"${5|true,false|}\" ",
+      "  move=\"${6|true,false|}\"",
+      "  maxmin=\"${7|true,false|}\"",
+      "  >",
+      "  ${7}",
+      "</lay-layer>"
+    ],
+    "description": "layui-vue弹层"
+  },
+  "layer-vue弹层open()方法": {
+    "prefix": "layer-open",
+    "body": [
+      "layer.open({",
+      "  title: () => ${1},",
+      "  content: () => ${2},",
+      "  type: ${3|dialog,page,iframe,drawer,loading|},",
+      "  shade: ${4|true,false|},",
+      "  move: ${5|true,false|},",
+      "  maxmin: ${6|true,false|},",
+      "})"
+    ],
+    "description": "layer-vue弹层open()方法"
+  },
+  "layui-vue弹层load()方法": {
+    "prefix": "layer-load",
+    "body": ["layer.load(${1|0,1,2|}, {time: ${2:1000}, ${3| ,icon:16|}})"],
+    "description": "layer-vue弹层open()方法,16加载按钮"
+  },
+  "layui-vue弹层confirm()方法": {
+    "prefix": "layer-confirm",
+    "body": ["layer.confirm('${1}')"],
+    "description": "layer-vue弹层confirm()方法"
+  },
+  "layui-vue弹层msg()方法": {
+    "prefix": "layer-msg",
+    "body": ["layer.msg(\"${1}\", {icon:${2|1,2,3,4,16|}, time: ${3:1000} })"],
+    "description": "layer-vue弹层msg()方法,1成功,2失败,3警告,4详情,16加载"
+  },
+  "layui-vue弹层drawer()方法": {
+    "prefix": "layer-drawer",
+    "body": [
+      "layer.drawer({",
+      "  title: () => ${1},",
+      "  content: () => ${2},",
+      "  offset: '${3|t,b,l,r|}',",
+      "  area: ${4},",
+      "})"
+    ],
+    "description": "layer-vue弹层drawer()方法"
   },
   "layui-vue容器": {
     "prefix": "lay-container",
@@ -426,5 +565,163 @@
       "<lay-backtop :show-height=\"${1:100}\" :bottom=\"${2:100}\" ${3:bgcolor=\"#5FB878\"} ${4| ,circle|}></lay-backtop>"
     ],
     "description": "layui-vue返回顶部"
+  },
+  "vue3CDN": {
+    "prefix": "v-cdn",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}vue@3"],
+    "description": "vue3CDN"
+  },
+  "vue3CDN,ESM": {
+    "prefix": "v-cdn-es",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}vue@3/dist/vue.esm-browser.js"],
+    "description": "vue3CDN,ES模块"
+  },
+  "layui-vueCDN": {
+    "prefix": "lay-cdn",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue"],
+    "description": "layui-vueCDN"
+  },
+  "layui-vueCDN,ESM": {
+    "prefix": "lay-cdn-es",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue/lib/index.js"],
+    "description": "layui-vueCDN,ES模块"
+  },
+  "layui-vueCDN,Css": {
+    "prefix": "lay-cdn-css",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue/lib/index.css"],
+    "description": "layui-vueCDN,Css"
+  },
+  "vuesetup传统模板": {
+    "prefix": "!v",
+    "body": [
+      "<template>",
+      "  ${1}",
+      "</template>",
+      "<script ${2| ,lang=\"ts\"|}>",
+      "  export default defineComponent({",
+      "    name: '${3}',",
+      "    setup() {",
+      "",
+      "      return { }",
+      "    }",
+      "  })",
+      "</script>",
+      "<style ${4| ,lang=\"less\",lang=\"scss\"|} ${5| ,scoped|}>",
+      "",
+      "</style>"
+    ],
+    "description": "vuesetup传统模板,defineComponent"
+  },
+  "vuesetup语法糖模板": {
+    "prefix": "!vs",
+    "body": [
+      "<script ${1| ,lang=\"ts\" |} setup>",
+      "",
+      "</script>",
+      "<template>",
+      "  ${4}",
+      "</template>",
+      "<style ${2| ,lang=\"less\" ,lang=\"scss\"|} ${3| ,scoped|}>",
+      "",
+      "</style>"
+    ],
+    "description": "vuesetup传统模板,defineComponent"
+  },
+  "layui-vue-html模板": {
+    "prefix": "!lay-html",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "",
+      "<head>",
+      "  <title>Document</title>",
+      "  <meta charset=\"UTF-8\">",
+      "  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "  <link rel=\"stylesheet\" type=\"text/css\" href=\"${1|https://unpkg.com/@layui/layui-vue/lib/index.css}, |}\">",
+      "  <script src=\"${2|https://unpkg.com/vue@3, |}\"></script>",
+      "  <script src=\"${3|https://unpkg.com/@layui/layui-vue, |}\"></script>",
+      "</head>",
+      "",
+      "<body>",
+      "  <div id=\"app\">",
+      "    <lay-button @click=\"openLayer\">Hello</lay-button>",
+      "  </div>",
+      "</body>",
+      "<script>",
+      "  const { createApp, ref } = Vue",
+      "  const { layer } = LayuiVue",
+      "",
+      "  const App = {",
+      "    setup() {",
+      "      const openLayer = function () {",
+      "        layer.msg(\"hello\")",
+      "      }",
+      "      return {",
+      "        openLayer",
+      "      }",
+      "    }",
+      "  };",
+      "",
+      "  const app = createApp(App)",
+      "  app.use(LayuiVue)",
+      "  app.mount('#app')",
+      "</script>",
+      "",
+      "</html>"
+    ],
+    "description": "layui-vue-html模板"
+  },
+  "layui-vue-html-es模板": {
+    "prefix": "!lay-html-es",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "",
+      "<head>",
+      "  <meta charset=\"UTF-8\">",
+      "  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "  <link rel=\"stylesheet\" type=\"text/css\" href=\"${1|https://unpkg.com/@layui/layui-vue/lib/index.css, |}\">",
+      "  <script type=\"importmap\">",
+      "    {",
+      "      \"imports\": {",
+      "        \"vue\": \"${2|https://unpkg.com/vue@3/dist/vue.esm-browser.js, |}\",",
+      "        \"layui\": \"${3|https://unpkg.com/@layui/layui-vue/lib/index.js, |}\"",
+      "      }",
+      "    }",
+      "  </script>",
+      "  <title>Document</title>",
+      "</head>",
+      "",
+      "<body>",
+      "  <div id=\"app\">",
+      "    <lay-button @click=\"say\">Hello</lay-button>",
+      "  </div>",
+      "  <script type=\"module\">",
+      "    import { createApp } from 'vue'",
+      "    import Layui from 'layui'",
+      "",
+      "    const App = {",
+      "      data() {",
+      "        return {",
+      "          message: 'Hello Vue!'",
+      "        }",
+      "      },",
+      "      methods: {",
+      "        say() {",
+      "          this.$layer.msg(\"hello\")",
+      "        }",
+      "      },",
+      "    }",
+      "    const app = createApp(App)",
+      "    app.use(Layui)",
+      "    app.mount('#app')",
+      "  </script>",
+      "</body>",
+      "",
+      "</html>"
+    ],
+    "description": "layui-vue-html-es模板,目前只有基于Chromium的浏览器支持导入映射表，如果使用了Firefox浏览器，则该功能仅在102+版本中受支持，且目前需要启用about,config中的dom.importMaps.enabled选项。如果更偏爱那些还不支持导入映射表的浏览器，你可以使用es-module-shims来进行polyfill,https//github.com/guybedford/es-module-shims"
   }
 }

@@ -1,15 +1,90 @@
 <!--  
-  @name: layui-vue 建设中
+  @name: layui-vue 进度
   @prefix: lay-progress
-  @description: layui-vue 开关
+  @description: layui-vue 进度
 -->
-lay-timeline
-lay-collapse
-lay-table
-lay-avatar
-lay-empty
-lay-page
-lay-tree
-lay-transfer
-lay-carousel
-lay-count-up
+<lay-progress percent="${1}" size="${2| ,big|}" theme="${3|orange,green,cyan,blue,black,gray|" :show-text="${4|true,false|}" text="${5}"></lay-progress>
+<!--  
+  @name: layui-vue 时间线
+  @prefix: lay-timeline
+  @description: layui-vue 时间线
+-->
+<lay-timeline direction="${1|vertical,horizontal|}">
+  <lay-timeline-item title="${2}" ${3| ,simple|}>${4}</lay-timeline-item>
+</lay-timeline>
+<!--  
+  @name: layui-vue 折叠面板
+  @prefix: lay-collapse
+  @description: layui-vue 进度
+-->
+<lay-collapse v-model="${1}" ${2| ,accordion} change="${3}">
+  <lay-collapse-item title="${4}" id="${5}">
+     ${6}
+  </lay-collapse-item>
+</lay-collapse>
+<!--  
+  @name: layui-vue 表格
+  @prefix: lay-table
+  @description: layui-vue 进度
+-->
+<lay-table 
+  :columns="${1}" 
+  :data-source="${2}" 
+  v-model:selectedKeys="${3}"
+  checkbox="${4|true,false|}" 
+  default-toolbar="${5|true,false|}"
+  size="${6|lg,md,sm|}" 
+  :page="${7}" 
+  @change="${8}">
+</lay-table>
+<!--  
+  @name: layui-vue 头像
+  @prefix: lay-avatar
+  @description: layui-vue 进度
+-->
+<lay-avatar :src="${1}" size="${2|xs,sm,lg|}" ${3| ,radius|}></lay-avatar>
+<!--  
+  @name: layui-vue 空
+  @prefix:lay-empty
+  @description: layui-vue 进度
+-->
+<lay-empty description="${1}">
+  <template #${2|extra,image|}>
+    ${3}
+  </template>
+</lay-empty>
+<!--  
+  @name: layui-vue 分页
+  @prefix: lay-page
+  @description: layui-vue 进度
+-->
+<lay-page v-model="${1}" :limit="${2}" @limit="${3}" :total="${4}" :show-page="${5|true,false|}" :show-limit="${6|true,false|}"></lay-page>
+<!--  
+  @name: layui-vue 树
+  @prefix: lay-tree
+  @description: layui-vue 进度
+-->
+<lay-tree :data="${1}" v-model:checkedKeys="${2}" :showCheckbox="${3|true,false|}" ${4| ,collapse-transition|} @node-click="${5}">
+</lay-tree>
+<!--  
+  @name: layui-vue 穿梭框
+  @prefix: lay-transfer
+  @description: layui-vue 进度
+-->
+<lay-transfer :data-source="${1}" title="${2}" :show-search="${3|true,false|}"></lay-transfer>
+<!--  
+  @name: layui-vue 轮播
+  @prefix: lay-carousel
+  @description: layui-vue 进度
+-->
+<lay-carousel v-model="${1}" anim="${2| ,updown|}" indicator="${3|inside,outside,none|}" arrow="{4|hover,always,none|}" :autoplay="${5|true,false|}" interval="${6}">
+  <lay-carousel-item v-for="${7} in ${7}" :id="${7}.id">
+    <div>{{${7}.text }}</div>
+  </lay-carousel-item>
+</lay-carousel>
+<!--  
+  @name: layui-vue 数字滚动
+  @prefix: lay-count-up
+  @description: layui-vue 进度
+-->
+<lay-count-up :startVal="${1:0}" :endVal="${2}" :decimal-places="${3:0}" :use-grouping="${4|true,false|}" prefix="${5}" suffix="${6}"></lay-count-up>

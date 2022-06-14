@@ -1,0 +1,163 @@
+<!--  
+  @name: vue 3 CDN
+  @prefix:v-cdn
+  @description: vue 3 CDN
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}vue@3
+<!--  
+  @name: vue 3 CDN, ESM
+  @prefix:v-cdn-es
+  @description: vue 3 CDN, ES 模块
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}vue@3/dist/vue.esm-browser.js
+<!--  
+  @name: layui-vue CDN
+  @prefix:lay-cdn
+  @description: layui-vue CDN
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue
+<!--  
+  @name: layui-vue CDN,ESM
+  @prefix:lay-cdn-es
+  @description:  layui-vue CDN,ES 模块
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue/lib/index.js
+<!--  
+  @name: layui-vue CDN, Css
+  @prefix:lay-cdn-css
+  @description: layui-vue CDN,Css
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue/lib/index.css
+<!--  
+  @name: vue setup 传统模板
+  @prefix:!v
+  @description:  vue setup 传统模板, defineComponent
+-->
+<template>
+  ${1}
+</template>
+<script ${2| ,lang="ts"|}>
+  export default defineComponent({
+    name: '${3}',
+    setup() {
+
+      return { }
+    }
+  })
+</script>
+<style ${4| ,lang="less",lang="scss"|} ${5| ,scoped|}>
+
+</style>
+<!--  
+  @name: vue setup 语法糖模板
+  @prefix:!vs
+  @description:  vue setup 传统模板, defineComponent
+-->
+<script ${1| ,lang="ts" |} setup>
+
+</script>
+<template>
+  ${4}
+</template>
+<style ${2| ,lang="less" ,lang="scss"|} ${3| ,scoped|}>
+
+</style>
+<!--  
+  @name: layui-vue-html 模板
+  @prefix:!lay-html
+  @description:layui-vue-html 模板
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="${1|https://unpkg.com/@layui/layui-vue/lib/index.css}, |}">
+  <script src="${2|https://unpkg.com/vue@3, |}"></script>
+  <script src="${3|https://unpkg.com/@layui/layui-vue, |}"></script>
+</head>
+
+<body>
+  <div id="app">
+    <lay-button @click="openLayer">Hello</lay-button>
+  </div>
+</body>
+<script>
+  const { createApp, ref } = Vue
+  const { layer } = LayuiVue
+
+  const App = {
+    setup() {
+      const openLayer = function () {
+        layer.msg("hello")
+      }
+      return {
+        openLayer
+      }
+    }
+  };
+
+  const app = createApp(App)
+  app.use(LayuiVue)
+  app.mount('#app')
+</script>
+
+</html>
+<!--  
+  @name: layui-vue-html-es 模板
+  @prefix:!lay-html-es
+  @description: layui-vue-html-es 模板, 目前只有基于 Chromium 的浏览器支持导入映射表，
+    如果使用了 Firefox 浏览器，则该功能仅在 102+ 版本中受支持，
+    且目前需要启用 about,config 中的 dom.importMaps.enabled 选项。
+    如果更偏爱那些还不支持导入映射表的浏览器，你可以使用 es-module-shims 来进行 polyfill,
+    https//github.com/guybedford/es-module-shims
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="${1|https://unpkg.com/@layui/layui-vue/lib/index.css, |}">
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "${2|https://unpkg.com/vue@3/dist/vue.esm-browser.js, |}",
+        "layui": "${3|https://unpkg.com/@layui/layui-vue/lib/index.js, |}"
+      }
+    }
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <lay-button @click="say">Hello</lay-button>
+  </div>
+  <script type="module">
+    import { createApp } from 'vue'
+    import Layui from 'layui'
+
+    const App = {
+      data() {
+        return {
+          message: 'Hello Vue!'
+        }
+      },
+      methods: {
+        say() {
+          this.$layer.msg("hello")
+        }
+      },
+    }
+    const app = createApp(App)
+    app.use(Layui)
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

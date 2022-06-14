@@ -3,23 +3,36 @@
   "displayName": "",
   "description": "layui-vue 辅助插件",
   "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/starsatdawn/layui-vue-helper.git"
+  },
   "engines": {
     "vscode": "^1.68.0"
   },
   "categories": [
+    "Snippets",
     "Other"
   ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "genSnippet": "node ./out/script/layui-vue-snippets-build.js ./src/template"
+  },
   "activationEvents": [
-    "onCommand:test.helloWorld"
+    "onLanguage:vue",
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:markdown"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "test.helloWorld",
-        "title": "Hello World"
-      }
-    ],
     "snippets": [
       {
         "language": "typescript",
@@ -41,16 +54,22 @@
         "language": "vue-html",
         "path": "./snippets/layui-vue.json"
       }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js",
-    "genSnippet": "node ./out/script/layui-vue-snippets-generate.js ./src/template"
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Layui Vue Helper Config",
+      "properties": {
+        "layui-vue-helper.language": {
+          "type": "string",
+          "default": "zh-CN",
+          "description": "Document Language of Layui Vue",
+          "enum": [
+            "zh-CN",
+            "en-US"
+          ]
+        }
+      }
+    }
   },
   "devDependencies": {
     "@types/common-tags": "^1.8.1",
@@ -65,7 +84,8 @@
     "glob": "^8.0.3",
     "mocha": "^10.0.0",
     "typescript": "^4.7.2",
-    "common-tags": "^1.8.2"
+    "common-tags": "^1.8.2",
+    "vsce": "2.9.1"
   },
   "dependencies": {}
 }

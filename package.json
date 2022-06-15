@@ -4,6 +4,10 @@
   "description": "layui-vue 辅助插件",
   "version": "0.0.1",
   "license": "MIT",
+  "author": {
+    "name": "Sight"
+  },
+  "icon": "layui.png",
   "repository": {
     "type": "git",
     "url": "https://gitee.com/starsatdawn/layui-vue-helper.git"
@@ -23,7 +27,7 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "genSnippet": "node ./out/script/layui-vue-snippets-build.js ./src/template",
-    "genDoc": "node ./src/script/layui-vue-doc-build.js ./src/document/zh-CN" 
+    "genDoc": "node ./src/script/layui-vue-doc-build.js ./src/document/zh-CN"
   },
   "activationEvents": [
     "onLanguage:vue",

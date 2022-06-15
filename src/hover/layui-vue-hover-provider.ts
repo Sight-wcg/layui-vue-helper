@@ -4,7 +4,7 @@ import { localDocument } from '../document'
 import { HoverDocumentGenerator } from '../shared/hover-doc-generate'
 import { toKebabCase } from '../shared/util'
 import { ExtensionConfigutation, ExtensionLanguage } from '../shared/enum'
-import { TagObject, ElDocument } from '../shared/types'
+import { TagObject, LayDocument } from '../shared/types'
 
 export class LayuiHoverProvier implements HoverProvider {
   private _position!: Position
@@ -180,7 +180,7 @@ export class LayuiHoverProvier implements HoverProvider {
       const tagDocument = document[tag]
       const hoverMarkdownStrings: MarkdownString[] = []
       Object.keys(tagDocument).forEach((key: string) => {
-        const hoverMarkdownString: MarkdownString = HoverDocumentGenerator.getInstance().generate<ElDocument>(tagDocument, key, tag, attr, language)
+        const hoverMarkdownString: MarkdownString = HoverDocumentGenerator.getInstance().generate<LayDocument>(tagDocument, key, tag, attr, language)
         if (hoverMarkdownString) {
           hoverMarkdownStrings.push(hoverMarkdownString)
         }

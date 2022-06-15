@@ -88,14 +88,14 @@ export interface BaseDocument {
 }
 
 /**
- * ElementUI文档类型
+ * layui文档类型
  * 用于扩展具有其他字段的文档类型
  *
  * @export
- * @interface ElDocument
+ * @interface LayDocument
  * @extends {BaseDocument}
  */
-export interface ElDocument extends BaseDocument {
+export interface LayDocument extends BaseDocument {
   pickerOptions?: DocumentAttribute[]
   shortcuts?: DocumentAttribute[]
   selectOptions?: DocumentAttribute[]

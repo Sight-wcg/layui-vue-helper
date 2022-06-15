@@ -152,7 +152,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
     if (!attribute) {
       return []
     }
-    const values = attribute.value.split(/[,/\\]/).map((item) => item.trim())
+    const values = attribute.value.trim().split(' ').map((item) => item.trim().replace(/`/g,''))
     return values
   }
 

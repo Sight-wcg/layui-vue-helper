@@ -22,7 +22,8 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
-    "genSnippet": "node ./out/script/layui-vue-snippets-build.js ./src/template"
+    "genSnippet": "node ./out/script/layui-vue-snippets-build.js ./src/template",
+    "genDoc": "node ./src/script/layui-vue-doc-build.js ./src/document/zh-CN" 
   },
   "activationEvents": [
     "onLanguage:vue",
@@ -48,10 +49,6 @@
       },
       {
         "language": "vue",
-        "path": "./snippets/layui-vue.json"
-      },
-      {
-        "language": "vue-html",
         "path": "./snippets/layui-vue.json"
       }
     ],

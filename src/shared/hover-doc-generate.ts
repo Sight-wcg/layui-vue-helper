@@ -24,10 +24,10 @@ export class HoverDocumentGenerator {
     if (attributes.length) {
       // 生成表头
       if (language === 'zh-CN') {
-        markdownString.appendMarkdown(`### ${tag} 属性 \r`)
+        markdownString.appendMarkdown(`#### ${tag} 属性 \r`)
         markdownString.appendMarkdown('| 属性 | 说明 | 类型 | 可选值 | 默认值 |\r')
       } else {
-        markdownString.appendMarkdown(`### ${tag} Attributes \r`)
+        markdownString.appendMarkdown(`#### ${tag} Attributes \r`)
         markdownString.appendMarkdown('| Attributes | Description | Type | Accepted Values | Default |\r')
       }
       markdownString.appendMarkdown('|---|---|:-:|---|:-:|\r')
@@ -69,10 +69,10 @@ export class HoverDocumentGenerator {
     const methods = document.methods || []
     if (methods.length) {
       if (language === 'zh-CN') {
-        markdownString.appendMarkdown(`### ${tag} 方法\r`)
+        markdownString.appendMarkdown(`#### ${tag} 方法\r`)
         markdownString.appendMarkdown('| 方法 | 说明 | 参数 |\r')
       } else {
-        markdownString.appendMarkdown(`### ${tag} Method\r`)
+        markdownString.appendMarkdown(`#### ${tag} Method\r`)
         markdownString.appendMarkdown('| Method | Description | Parameters |\r')
       }
       markdownString.appendMarkdown('|---|---|:-:|\r')
@@ -114,10 +114,10 @@ export class HoverDocumentGenerator {
     const events = document.events || []
     if (events.length) {
       if (language === 'zh-CN') {
-        markdownString.appendMarkdown(`### ${tag} 事件\r`)
+        markdownString.appendMarkdown(`#### ${tag} 事件\r`)
         markdownString.appendMarkdown('| 方法 | 说明 | 参数 |\r')
       } else {
-        markdownString.appendMarkdown(`### ${tag} Event\r`)
+        markdownString.appendMarkdown(`#### ${tag} Event\r`)
         markdownString.appendMarkdown('| Event | Description | Parameters |\r')
       }
       markdownString.appendMarkdown('|---|---|:-:|\r')
@@ -159,10 +159,10 @@ export class HoverDocumentGenerator {
     const slots = document.slots || []
     if (slots.length) {
       if (language === 'zh-CN') {
-        markdownString.appendMarkdown(`### ${tag} 插槽\r`)
+        markdownString.appendMarkdown(`#### ${tag} 插槽\r`)
         markdownString.appendMarkdown('| 插槽 | 说明 |\r')
       } else {
-        markdownString.appendMarkdown(`### ${tag} Slot\r`)
+        markdownString.appendMarkdown(`#### ${tag} Slot\r`)
         markdownString.appendMarkdown('| Slot | Description |\r')
       }
       markdownString.appendMarkdown('|---|---|\r')
@@ -188,7 +188,7 @@ export class HoverDocumentGenerator {
   }
 
   /**
-   * 生成局部插槽文档表格
+   * 生成插槽文档表格
    *
    * @template T type extends BaseDocument
    * @param {T} document 文档 具体标签对应的文档
@@ -204,10 +204,10 @@ export class HoverDocumentGenerator {
     const scopedSlots = document.scopedSlots || []
     if (scopedSlots.length) {
       if (language === 'zh-CN') {
-        markdownString.appendMarkdown(`### ${tag} 插槽\r`)
+        markdownString.appendMarkdown(`#### ${tag} 插槽\r`)
         markdownString.appendMarkdown('| 插槽 | 说明 |\r')
       } else {
-        markdownString.appendMarkdown(`### ${tag} Slot\r`)
+        markdownString.appendMarkdown(`#### ${tag} Slot\r`)
         markdownString.appendMarkdown('| Slot | Description |\r')
       }
       markdownString.appendMarkdown('|---|---|\r')
@@ -246,6 +246,7 @@ export class HoverDocumentGenerator {
   private generateOther<T extends BaseDocument>(document: T, tag: string, attribute: string, language: string): MarkdownString {
     let isUndefined: boolean = true // 标记是否具有文档
     let markdownString: MarkdownString = new MarkdownString('', true)
+    // @ts-ignore
     const attributes = document[attribute] || []
     if (attributes.length) {
       markdownString.appendMarkdown(`### ${tag} ${attribute} \r`)

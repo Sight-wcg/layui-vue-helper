@@ -1,4 +1,4 @@
-# layui-vue-helper README
+# layui-vue-helper
 
 layui-vue-helper is a development enhancement tool for Layui Vue.
 
@@ -8,8 +8,8 @@ layui-vue-helper is a development enhancement tool for Layui Vue.
 #### Manual Install
 
 Go to the git and download the snippets folder, then copy the files in the folder to the path directly:
-- Mac: /Users/<your-user-name>/Library/Application Support/Code/User/snippets/
-- Windows: <your-installed-driver>:\Users <your-user-name>\AppData\Roaming\Code\User\snippets\
+- Mac: /Users/< your-user-name >/Library/Application Support/Code/User/snippets/
+- Windows: < your-installed-driver >:\Users < your-user-name >\AppData\Roaming\Code\User\snippets\
 
 ### Autocomplete
 

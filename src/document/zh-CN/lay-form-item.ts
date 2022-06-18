@@ -59,6 +59,8 @@ export const slots: DocumentSlot[] = [
   { name: 'required', description: '必填前缀插槽' },
 ];
 
-export const document: LayDocument = { attributes, methods, slots };
+export const docLink: string = 'form';
+
+export const document: LayDocument = { attributes, methods, slots, docLink };
 
 export default document;

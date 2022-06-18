@@ -35,6 +35,8 @@ export const events: DocumentEvent[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'default', description: '默认插槽，自定义内容时可以使用为' }];
 
-export const document: LayDocument = { attributes, events, slots };
+export const docLink: string = 'rate';
+
+export const document: LayDocument = { attributes, events, slots, docLink };
 
 export default document;

@@ -7,6 +7,7 @@ export const attributes: DocumentAttribute[] = [
   { name: 'placeholder', description: '提示信息', type: '-', default: '-', value: '--' },
   { name: 'disabled', description: '禁用', type: '-', default: '-', value: '`true` `false`' },
   { name: 'v-model', description: '值', type: '-', default: '-', value: '--' },
+  { name: 'show-count', description: '显示字数', type: '-', default: '-', value: '--' },
 ];
 
 export const events: DocumentEvent[] = [
@@ -15,6 +16,8 @@ export const events: DocumentEvent[] = [
   { name: 'blur', description: '原生 blur 事件', parameter: '--' },
 ];
 
-export const document: LayDocument = { attributes, events };
+export const docLink: string = 'textarea';
+
+export const document: LayDocument = { attributes, events, docLink };
 
 export default document;

@@ -17,6 +17,8 @@ export const events: DocumentEvent[] = [
   },
 ];
 
-export const document: LayDocument = { attributes, events };
+export const docLink: string = 'collapse';
+
+export const document: LayDocument = { attributes, events, docLink };
 
 export default document;

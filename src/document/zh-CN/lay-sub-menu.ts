@@ -11,6 +11,8 @@ export const slots: DocumentSlot[] = [
   { name: 'expandIcon', description: '扩展图标' },
 ];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'menu';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

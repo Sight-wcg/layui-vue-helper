@@ -15,6 +15,8 @@ export const events: DocumentEvent[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'content', description: '下拉内容' }];
 
-export const document: LayDocument = { attributes, events, slots };
+export const docLink: string = 'dropdown';
+
+export const document: LayDocument = { attributes, events, slots, docLink };
 
 export default document;

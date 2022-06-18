@@ -34,6 +34,8 @@ export const slots: DocumentSlot[] = [
   { name: 'suffix', description: '后缀' },
 ];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'countup';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

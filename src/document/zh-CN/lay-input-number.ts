@@ -30,6 +30,8 @@ export const events: DocumentEvent[] = [
   { name: 'change', description: '值更改触发事件', parameter: '(value: number)' },
 ];
 
-export const document: LayDocument = { attributes, events };
+export const docLink: string = 'inputNumber';
+
+export const document: LayDocument = { attributes, events, docLink };
 
 export default document;

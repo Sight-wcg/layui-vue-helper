@@ -16,6 +16,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'showText', description: '展示描述', type: '-', default: '-', value: '--' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'progress';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

@@ -5,6 +5,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'nm', description: '灰色样式', type: '-', default: '-', value: '--' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'quote';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

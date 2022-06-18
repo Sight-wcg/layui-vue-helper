@@ -9,6 +9,8 @@ export const attributes: DocumentAttribute[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'dot', description: '节点' }];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'timeline';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

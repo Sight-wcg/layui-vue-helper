@@ -5,6 +5,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'direction', description: '排列方向', type: '-', default: '-', value: '`horizontal` `vertical`' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'timeline';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

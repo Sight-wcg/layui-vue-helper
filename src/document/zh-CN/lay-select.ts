@@ -24,6 +24,8 @@ export const events: DocumentEvent[] = [
   { name: 'create', description: '允许创建情况下的创建回调事件', parameter: '用户输入的关键词 string' },
 ];
 
-export const document: LayDocument = { attributes, events };
+export const docLink: string = 'select';
+
+export const document: LayDocument = { attributes, events, docLink };
 
 export default document;

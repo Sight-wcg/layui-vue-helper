@@ -85,6 +85,7 @@ export interface BaseDocument {
   methods?: DocumentMethod[]
   scopedSlots?: DocumentScopedSlot[]
   slots?: DocumentSlot[]
+  docLink?: string
 }
 
 /**

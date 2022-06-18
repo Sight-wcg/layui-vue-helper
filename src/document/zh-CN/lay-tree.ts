@@ -25,6 +25,8 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = [{ name: 'node-click', description: '节点 click 事件', parameter: '--' }];
 
-export const document: LayDocument = { attributes, events };
+export const docLink: string = 'tree';
+
+export const document: LayDocument = { attributes, events, docLink };
 
 export default document;

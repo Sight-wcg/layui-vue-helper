@@ -8,6 +8,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'isFullscreen', description: '是否全屏', type: 'boolean', default: '-', value: '' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'fullscreen';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

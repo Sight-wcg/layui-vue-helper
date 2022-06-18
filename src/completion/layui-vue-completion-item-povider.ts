@@ -186,7 +186,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
    */
   getEventCompletionItems(tag: string): CompletionItem[] {
     let completionItems: CompletionItem[] = []
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('element-ui-helper')
+    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper')
     const language = config?.language || ExtensionLanguage.cn
     const document: Record<string, any> = localDocument[language]
     const preText = this.getTextBeforePosition(this._position)
@@ -219,7 +219,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
    */
   getAttrCompletionItems(tag: string): CompletionItem[] {
     let completionItems: CompletionItem[] = []
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('element-ui-helper')
+    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper')
     const language = config?.language || ExtensionLanguage.cn
     const document: Record<string, any> = localDocument[language]
     const preText = this.getTextBeforePosition(this._position)
@@ -258,7 +258,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
    */
   getTagCompletionItems(tag: string): CompletionItem[] {
     let completionItems: CompletionItem[] = []
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('element-ui-helper')
+    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper')
     const language = config?.language || ExtensionLanguage.cn
     const preText = this.getTextBeforePosition(this._position)
     const document: Record<string, any> = localDocument[language]
@@ -271,7 +271,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
       completionItems.push({
         label: `${key}`,
         sortText: `0${key}`,
-        detail: 'ElementUI Tag',
+        detail: 'LayuiVue Tag',
         kind: CompletionItemKind.Value,
         insertText: new SnippetString().appendText(`${key}`).appendTabstop().appendText('>').appendTabstop().appendText(`</${key}>`),
         range

@@ -10,6 +10,8 @@ export const attributes: DocumentAttribute[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'extra', description: '操作' }];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'exception';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

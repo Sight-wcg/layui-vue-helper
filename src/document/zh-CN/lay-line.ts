@@ -25,6 +25,8 @@ export const attributes: DocumentAttribute[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'default', description: '默认插槽，仅支持 direction 为 `horizontal`' }];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'line';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

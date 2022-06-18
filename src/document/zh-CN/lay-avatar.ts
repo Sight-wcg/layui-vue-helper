@@ -8,6 +8,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'alt', description: '描述图像的替换文本', type: '-', default: '-', value: '--' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'avatar';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

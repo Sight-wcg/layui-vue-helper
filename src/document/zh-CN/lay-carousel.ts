@@ -25,6 +25,8 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = [{ name: 'change', description: '切换回调', parameter: 'id' }];
 
-export const document: LayDocument = { attributes, events };
+export const docLink: string = 'carousel';
+
+export const document: LayDocument = { attributes, events, docLink };
 
 export default document;

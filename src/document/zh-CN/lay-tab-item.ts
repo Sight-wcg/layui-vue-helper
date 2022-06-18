@@ -7,6 +7,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'closable', description: '允许关闭', type: '-', default: '-', value: '--' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'tab';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

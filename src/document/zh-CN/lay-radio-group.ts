@@ -8,6 +8,8 @@ export const attributes: DocumentAttribute[] = [
 
 export const events: DocumentEvent[] = [{ name: 'change', description: '切换事件', parameter: 'current : 当前值' }];
 
-export const document: LayDocument = { attributes, events };
+export const docLink: string = 'radio';
+
+export const document: LayDocument = { attributes, events, docLink };
 
 export default document;

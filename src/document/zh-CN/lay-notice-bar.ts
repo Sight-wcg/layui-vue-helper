@@ -10,6 +10,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'textlist', description: '垂直滚动内容', type: '-', default: '-', value: 'Array' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'noticeBar';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

@@ -6,6 +6,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'type', description: '类型', type: '`string`', default: '`collapse`', value: '`collapse`, `fade`' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'transition';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

@@ -12,6 +12,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'showDots', description: '是否显示断点', type: '`Boolean`', default: '-', value: 'false' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'slider';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

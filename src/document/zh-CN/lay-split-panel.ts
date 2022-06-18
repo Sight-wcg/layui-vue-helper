@@ -6,6 +6,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'minSize', description: '块拉动最小范围(按像素 `px`)', type: 'number', default: '-', value: '50' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'splitPanel';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

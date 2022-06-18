@@ -8,6 +8,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'size', description: '尺寸', type: '-', default: '-', value: '--' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'icon';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

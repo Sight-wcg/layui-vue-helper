@@ -8,6 +8,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'trackColor', description: '滑槽颜色', type: '-', default: '-', value: '--' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'scroll';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

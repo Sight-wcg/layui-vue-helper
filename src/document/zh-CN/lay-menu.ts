@@ -11,6 +11,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'collapse-transition', description: '折叠动画', type: '-', default: '-', value: '`true` `false`' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'menu';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

@@ -7,6 +7,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'showSearch', description: '启用搜索', type: '-', default: '-', value: '--' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'iconPicker';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

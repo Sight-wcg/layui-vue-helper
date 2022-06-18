@@ -28,6 +28,8 @@ export const events: DocumentEvent[] = [
   { name: 'close', description: '关闭事件', parameter: 'id' },
 ];
 
-export const document: LayDocument = { attributes, events };
+export const docLink: string = 'tab';
+
+export const document: LayDocument = { attributes, events, docLink };
 
 export default document;

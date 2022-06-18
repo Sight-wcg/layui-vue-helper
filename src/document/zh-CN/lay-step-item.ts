@@ -20,6 +20,8 @@ export const slots: DocumentSlot[] = [
   { name: 'default', description: '内容区域自定义' },
 ];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'step';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

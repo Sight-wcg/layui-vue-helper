@@ -28,6 +28,8 @@ export const attributes: DocumentAttribute[] = [
   },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'tooltip';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

@@ -72,6 +72,8 @@ export const events: DocumentEvent[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'preview', description: '自定义预览效果' }];
 
-export const document: LayDocument = { attributes, events, slots };
+export const docLink: string = 'upload';
+
+export const document: LayDocument = { attributes, events, slots, docLink };
 
 export default document;

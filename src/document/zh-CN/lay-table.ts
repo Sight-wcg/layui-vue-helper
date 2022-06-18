@@ -24,6 +24,8 @@ export const events: DocumentEvent[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'toolbar', description: '自定义工具栏' }];
 
-export const document: LayDocument = { attributes, events, slots };
+export const docLink: string = 'table';
+
+export const document: LayDocument = { attributes, events, slots, docLink };
 
 export default document;

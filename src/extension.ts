@@ -40,16 +40,16 @@ export function activate(context: vscode.ExtensionContext) {
       [
         {
           language: 'vue',
-          scheme: 'file'
+          scheme: 'file',
         },
         {
           language: 'html',
-          scheme: 'file'
-        }
+          scheme: 'file',
+        },
       ],
       new LayuiHoverProvier()
     )
-  )
+  );
 }
 
 // this method is called when your extension is deactivated

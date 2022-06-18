@@ -20,6 +20,8 @@ export const slots: DocumentSlot[] = [
   { name: 'unswitch-icon', description: '禁用图标' },
 ];
 
-export const document: LayDocument = { attributes, events, slots };
+export const docLink: string = 'switch';
+
+export const document: LayDocument = { attributes, events, slots, docLink };
 
 export default document;

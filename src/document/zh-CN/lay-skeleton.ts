@@ -14,6 +14,8 @@ export const slots: DocumentSlot[] = [
   { name: 'skeleton', description: '自定义插槽' },
 ];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'skeleton';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

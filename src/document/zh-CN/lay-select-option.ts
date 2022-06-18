@@ -17,6 +17,8 @@ export const attributes: DocumentAttribute[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'default', description: '默认(`label`)' }];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'select';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

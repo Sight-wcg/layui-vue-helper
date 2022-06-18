@@ -71,6 +71,8 @@ export const events: DocumentEvent[] = [
   },
 ];
 
-export const document: LayDocument = { attributes, methods, events };
+export const docLink: string = 'form';
+
+export const document: LayDocument = { attributes, methods, events, docLink };
 
 export default document;

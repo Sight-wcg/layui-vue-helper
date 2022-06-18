@@ -8,6 +8,8 @@ export const attributes: DocumentAttribute[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'extra', description: '扩展插槽' }];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'empty';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

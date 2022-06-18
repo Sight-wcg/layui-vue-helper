@@ -14,6 +14,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'simple', description: '一次性选择，无需点击确认按钮', type: '`boolean`', default: 'false', value: '—' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'datePicker';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

@@ -23,6 +23,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'close', description: '关闭回调', type: '-', default: '-', value: '--' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'layer';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

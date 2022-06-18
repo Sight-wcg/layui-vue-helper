@@ -26,6 +26,8 @@ export const slots: DocumentSlot[] = [
   { name: 'next', description: '下一页' },
 ];
 
-export const document: LayDocument = { attributes, events, slots };
+export const docLink: string = 'page';
+
+export const document: LayDocument = { attributes, events, slots, docLink };
 
 export default document;

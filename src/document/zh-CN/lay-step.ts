@@ -24,6 +24,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'onChange', description: '点击切换时监听', type: 'function', default: '-', value: 'function(index){}' },
 ];
 
-export const document: LayDocument = { attributes };
+export const docLink: string = 'step';
+
+export const document: LayDocument = { attributes, docLink };
 
 export default document;

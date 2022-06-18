@@ -1,7 +1,7 @@
 import { LayDocument } from '../../shared/types';
 import { DocumentAttribute } from '../../shared/types';
-import { DocumentSlot } from '../../shared/types';
 import { DocumentEvent } from '../../shared/types';
+import { DocumentSlot } from '../../shared/types';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'name', description: '原始属性 name', type: '-', default: '-', value: '--' },
@@ -17,7 +17,6 @@ export const attributes: DocumentAttribute[] = [
 ];
 
 export const events: DocumentEvent[] = [
-  { name: '事件', description: '描述', parameter: '参数' },
   { name: 'input', description: '原生 input 事件', parameter: 'event : Event' },
   { name: 'foucs', description: '原生 foucs 事件', parameter: 'event : Event' },
   { name: 'blur', description: '原生 blur 事件', parameter: 'event : Event' },
@@ -30,6 +29,8 @@ export const slots: DocumentSlot[] = [
   { name: 'suffix', description: '输入框后置内容' },
 ];
 
-export const document: LayDocument = { attributes, slots, events };
+export const docLink: string = 'input';
+
+export const document: LayDocument = { attributes, events, slots, docLink };
 
 export default document;

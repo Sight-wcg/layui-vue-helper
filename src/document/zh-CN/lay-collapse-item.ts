@@ -13,6 +13,8 @@ export const slots: DocumentSlot[] = [
   { name: 'title', description: '标题插槽' },
 ];
 
-export const document: LayDocument = { attributes, slots };
+export const docLink: string = 'collapse';
+
+export const document: LayDocument = { attributes, slots, docLink };
 
 export default document;

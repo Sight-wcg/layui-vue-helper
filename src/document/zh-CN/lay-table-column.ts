@@ -13,6 +13,8 @@ export const slots: DocumentSlot[] = [
   { name: 'ellipsisTooltip', description: '当内容过长被隐藏时显示 tooltip' },
 ];
 
-export const document: LayDocument = { slots };
+export const docLink: string = 'table';
+
+export const document: LayDocument = { slots, docLink };
 
 export default document;

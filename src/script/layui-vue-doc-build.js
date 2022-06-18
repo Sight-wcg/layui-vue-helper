@@ -1,13 +1,14 @@
-import * as path from "path";
-import * as fs from "fs";
-import * as readline from 'readline'
-import * as os from 'os'
+const path = require('path')
+const fs = require('fs')
+const readline = require('readline')
+const os = require('os')
 
 const build = (dir) => {
   const docs = fs.readdirSync(dir)
   docs.forEach((doc) => {
     if (/\.md$/.test(doc)) {
       const document = {}
+      const docLink = doc.substr(0, doc.length - 3)
       // const outName = doc.substr(0, doc.length - 3) + ".ts";
       const inStream = fs.createReadStream(path.resolve(dir, doc))
       // const outStream = fs.createWriteStream(path.resolve(__dirname, outName));
@@ -172,6 +173,9 @@ const build = (dir) => {
             outStream.write(os.EOL + `export const scopedSlots: DocumentScopedSlot[] = ` + JSON.stringify(document[key].scopedSlots) + `;` + os.EOL)
           }
 
+          outStream.write(os.EOL + `export const docLink: string = '` + docLink + `';` + os.EOL)
+
+
           // 写入尾部
           outStream.write(os.EOL + `export const document: LayDocument = {`)
           if (document[key].attributes) {
@@ -189,6 +193,7 @@ const build = (dir) => {
           if (document[key].scopedSlots) {
             outStream.write(`scopedSlots,`)
           }
+          outStream.write(`docLink,`)
           outStream.write(`};` + os.EOL)
 
           outStream.write(os.EOL + `export default document;` + os.EOL)
@@ -237,6 +242,6 @@ if (argv.length < 3) {
   console.log('Dir is must be input.')
 } else {
   // console.log(path.resolve(__dirname, argv[2]));
- // build(path.resolve(process.cwd(), argv[2]))
+  // build(path.resolve(process.cwd(), argv[2]))
   createIndex(path.resolve(process.cwd(), argv[2]))
 }

@@ -51,6 +51,8 @@ export const events: DocumentEvent[] = [
 
 export const slots: DocumentSlot[] = [{ name: 'default', description: '自定义内容' }];
 
-export const document: LayDocument = { attributes, events, slots };
+export const docLink: string = 'backtop';
+
+export const document: LayDocument = { attributes, events, slots, docLink };
 
 export default document;

@@ -2,7 +2,7 @@
   "name": "layui-vue-helper",
   "displayName": "layui-vue-helper",
   "description": "layui-vue 辅助插件",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "license": "MIT",
   "publisher": "morning-star",
   "author": {
@@ -14,7 +14,7 @@
     "url": "https://gitee.com/starsatdawn/layui-vue-helper.git"
   },
   "engines": {
-    "vscode": "^1.68.0"
+    "vscode": "^1.64.0"
   },
   "categories": [
     "Snippets",
@@ -78,7 +78,7 @@
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "16.x",
-    "@types/vscode": "^1.68.0",
+    "@types/vscode": "1.64.0",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "@vscode/test-electron": "^2.1.3",

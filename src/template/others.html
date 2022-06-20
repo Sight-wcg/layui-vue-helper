@@ -36,7 +36,7 @@ ${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue/lib/index
 <template>
   ${1}
 </template>
-<script ${2| ,lang="ts"|}>
+<script${2| , lang="ts"|}>
   export default defineComponent({
     name: '${3}',
     setup() {
@@ -45,7 +45,7 @@ ${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue/lib/index
     }
   })
 </script>
-<style ${4| ,lang="less",lang="scss"|} ${5| ,scoped|}>
+<style${4| , lang="less", lang="scss"|}${5| ,scoped|}>
 
 </style>
 <!--  
@@ -53,13 +53,13 @@ ${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue/lib/index
   @prefix:!vs
   @description:  vue setup 传统模板, defineComponent
 -->
-<script ${1| ,lang="ts" |} setup>
+<script${1| , lang="ts" |} setup>
 
 </script>
 <template>
   ${4}
 </template>
-<style ${2| ,lang="less" ,lang="scss"|} ${3| ,scoped|}>
+<style${2| , lang="less" , lang="scss"|}${3| ,scoped|}>
 
 </style>
 <!--  
@@ -75,7 +75,7 @@ ${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue/lib/index
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="${1|https://unpkg.com/@layui/layui-vue/lib/index.css}, |}">
+  <link rel="stylesheet" type="text/css" href="${1|https://unpkg.com/@layui/layui-vue/lib/index.css, |}">
   <script src="${2|https://unpkg.com/vue@3, |}"></script>
   <script src="${3|https://unpkg.com/@layui/layui-vue, |}"></script>
 </head>
@@ -150,7 +150,7 @@ ${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@layui/layui-vue/lib/index
       },
       methods: {
         say() {
-          this.$layer.msg("hello")
+          this.\$layer.msg("hello")
         }
       },
     }

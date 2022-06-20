@@ -15,6 +15,7 @@ import {
 import { TagObject, DocumentAttribute, DocumentEvent } from '../shared/types'
 import { ExtensionLanguage, ExtensionConfigutation  } from '../shared/enum'
 import { localDocument } from '../document'
+import { toKebabCase } from '../shared/util'
 
 export class LayuiCompletionItemProvider implements CompletionItemProvider<CompletionItem> {
   private _document!: TextDocument
@@ -92,9 +93,9 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
     }
     while ((match = reg.exec(txt))) {
       arr.push({
-        text: match[1],
-        offset: this._document.offsetAt(new Position(line, match.index))
-      })
+        text: toKebabCase(match[1]),
+        offset: this._document.offsetAt(new Position(line, match.index)),
+      });
     }
     return arr.pop()
   }

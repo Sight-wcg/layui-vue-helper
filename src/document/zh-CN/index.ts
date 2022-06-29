@@ -1,3 +1,4 @@
+import layaffix from './lay-affix';
 import layavatar from './lay-avatar';
 import laybacktop from './lay-backtop';
 import laybadge from './lay-badge';
@@ -6,6 +7,7 @@ import laybuttongroup from './lay-button-group';
 import laybutton from './lay-button';
 import laycard from './lay-card';
 import laycarousel from './lay-carousel';
+import laycascader from './lay-cascader';
 import laycheckbox from './lay-checkbox';
 import laycol from './lay-col';
 import laycollapseitem from './lay-collapse-item';
@@ -30,6 +32,7 @@ import layline from './lay-line';
 import laymenuitem from './lay-menu-item';
 import laymenu from './lay-menu';
 import laynoticebar from './lay-notice-bar';
+import laypageheader from './lay-page-header';
 import laypage from './lay-page';
 import laypanel from './lay-panel';
 import layprogress from './lay-progress';
@@ -65,6 +68,7 @@ import laytree from './lay-tree';
 import layupload from './lay-upload';
 
 export default {
+  'lay-affix': layaffix,
   'lay-avatar': layavatar,
   'lay-backtop': laybacktop,
   'lay-badge': laybadge,
@@ -73,6 +77,7 @@ export default {
   'lay-button': laybutton,
   'lay-card': laycard,
   'lay-carousel': laycarousel,
+  'lay-cascader': laycascader,
   'lay-checkbox': laycheckbox,
   'lay-col': laycol,
   'lay-collapse-item': laycollapseitem,
@@ -97,6 +102,7 @@ export default {
   'lay-menu-item': laymenuitem,
   'lay-menu': laymenu,
   'lay-notice-bar': laynoticebar,
+  'lay-page-header': laypageheader,
   'lay-page': laypage,
   'lay-panel': laypanel,
   'lay-progress': layprogress,

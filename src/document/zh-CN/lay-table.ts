@@ -15,6 +15,35 @@ export const attributes: DocumentAttribute[] = [
   { name: 'indent-size', description: '树表行级缩进', type: '`number`', default: '`30`', value: '--' },
   { name: 'height', description: '表格高度', type: '`number`', default: '--', value: '--' },
   { name: 'maxHeight', description: '表格最大高度', type: '`number`', default: '--', value: '--' },
+  { name: 'even', description: '斑马条纹', type: '`boolean`', default: '`false`', value: '`true` `false`' },
+  {
+    name: 'cellStyle',
+    description: '列样式 function(row, column, rowIndex, columnIndex)',
+    type: '`string` `function`',
+    default: '--',
+    value: '--',
+  },
+  {
+    name: 'rowStyle',
+    description: '行样式 function(row, rowIndex)',
+    type: '`string` `function`',
+    default: '--',
+    value: '--',
+  },
+  {
+    name: 'cellClassName',
+    description: '列类名称 function(row, column, rowIndex, columnIndex)',
+    type: '`string` `function`',
+    default: '--',
+    value: '--',
+  },
+  {
+    name: 'rowClassName',
+    description: '行类名称 function(row, rowIndex)',
+    type: '`string` `function`',
+    default: '--',
+    value: '--',
+  },
 ];
 
 export const events: DocumentEvent[] = [

@@ -1,9 +1,8 @@
-# Change Log
+## [0.0.7-beta]
 
-All notable changes to the "hello" extension will be documented in this file.
+- 同步 layui-vue 文档 v1.2.4
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [0.0.6-beta]
 
-## [Unreleased]
-
-- Initial release
+- 修复驼峰标签无法自动补全的问题
+- 调整代码片段

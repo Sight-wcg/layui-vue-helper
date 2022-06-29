@@ -21,6 +21,13 @@ export const attributes: DocumentAttribute[] = [
     default: '-',
     value: '参数(`id`), `return false` 表示不进行切换',
   },
+  {
+    name: 'activeBarTransition',
+    description: '是否开启 activeBar 动画,仅 brief 有效,默认 `false`',
+    type: '-',
+    default: '-',
+    value: '`true` `false`',
+  },
 ];
 
 export const events: DocumentEvent[] = [

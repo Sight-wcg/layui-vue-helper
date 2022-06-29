@@ -2,7 +2,7 @@
   "name": "layui-vue-helper",
   "displayName": "layui-vue-helper",
   "description": "layui-vue 辅助插件",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "license": "MIT",
   "publisher": "morning-star",
   "author": {
@@ -24,6 +24,8 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
+    "build": "vsce package",
+    "publish": "vsce publish",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",

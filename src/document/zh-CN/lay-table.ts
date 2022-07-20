@@ -6,7 +6,6 @@ import { DocumentSlot } from '../../shared/types';
 export const attributes: DocumentAttribute[] = [
   { name: 'columns', description: '列配置 - [更多](#tableColumn)', type: '--', default: '--', value: '--' },
   { name: 'dataSource', description: '数据源', type: '--', default: '--', value: '--' },
-  { name: 'checkbox', description: '开启复选框', type: '`boolean`', default: '`false`', value: '`true` `false`' },
   { name: 'id', description: '主键', type: '`string`', default: '--', value: '--' },
   { name: 'v-model:selectedKeys', description: '选中项', type: '--', default: '--', value: '--' },
   { name: 'default-toolbar', description: '工具栏', type: '`boolean`', default: '`false`', value: '`true` `false`' },
@@ -44,6 +43,9 @@ export const attributes: DocumentAttribute[] = [
     default: '--',
     value: '--',
   },
+  { name: 'skin', description: '风格', type: '`string`', default: '--', value: '`line` `row` `nob`' },
+  { name: 'expand-index', description: '控制展开操作的所在列', type: '`number`', default: '--', value: '--' },
+  { name: 'selected-key', description: '配置单选列的选中值', type: '--', default: '--', value: '--' },
 ];
 
 export const events: DocumentEvent[] = [

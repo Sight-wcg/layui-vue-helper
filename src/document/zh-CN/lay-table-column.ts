@@ -11,6 +11,9 @@ export const slots: DocumentSlot[] = [
   { name: 'titleSlot', description: '标题插槽' },
   { name: 'align', description: '对齐方式' },
   { name: 'ellipsisTooltip', description: '当内容过长被隐藏时显示 tooltip' },
+  { name: 'totalRow', description: '开启列值统计' },
+  { name: 'type', description: '列类型' },
+  { name: 'hide', description: '隐藏列' },
 ];
 
 export const docLink: string = 'table';

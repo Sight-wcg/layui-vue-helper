@@ -8,12 +8,15 @@ export const attributes: DocumentAttribute[] = [
   { name: 'disabled', description: '禁用', type: '-', default: '-', value: '`true` `false`' },
   { name: 'v-model', description: '值', type: '-', default: '-', value: '--' },
   { name: 'show-count', description: '显示字数', type: '-', default: '-', value: '--' },
+  { name: 'allow-clear', description: '允许清空', type: '-', default: '-', value: '--' },
 ];
 
 export const events: DocumentEvent[] = [
   { name: 'input', description: '原生 input 事件', parameter: 'event : 事件对象' },
   { name: 'foucs', description: '原生 foucs 事件', parameter: 'event : 事件对象' },
   { name: 'blur', description: '原生 blur 事件', parameter: '--' },
+  { name: 'change', description: '更改回调', parameter: '--' },
+  { name: 'clear', description: '清空回调', parameter: '--' },
 ];
 
 export const docLink: string = 'textarea';

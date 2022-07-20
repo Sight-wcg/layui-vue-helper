@@ -8,6 +8,7 @@ import laybutton from './lay-button';
 import laycard from './lay-card';
 import laycarousel from './lay-carousel';
 import laycascader from './lay-cascader';
+import laycheckboxgroup from './lay-checkbox-group';
 import laycheckbox from './lay-checkbox';
 import laycol from './lay-col';
 import laycollapseitem from './lay-collapse-item';
@@ -15,6 +16,8 @@ import laycollapse from './lay-collapse';
 import laycontainer from './lay-container';
 import laycountup from './lay-count-up';
 import laydatepicker from './lay-date-picker';
+import laydropdownmenuitem from './lay-dropdown-menu-item';
+import laydropdownsubmenu from './lay-dropdown-sub-menu';
 import laydropdown from './lay-dropdown';
 import layempty from './lay-empty';
 import layexception from './lay-exception';
@@ -78,6 +81,7 @@ export default {
   'lay-card': laycard,
   'lay-carousel': laycarousel,
   'lay-cascader': laycascader,
+  'lay-checkbox-group': laycheckboxgroup,
   'lay-checkbox': laycheckbox,
   'lay-col': laycol,
   'lay-collapse-item': laycollapseitem,
@@ -85,6 +89,8 @@ export default {
   'lay-container': laycontainer,
   'lay-count-up': laycountup,
   'lay-date-picker': laydatepicker,
+  'lay-dropdown-menu-item': laydropdownmenuitem,
+  'lay-dropdown-sub-menu': laydropdownsubmenu,
   'lay-dropdown': laydropdown,
   'lay-empty': layempty,
   'lay-exception': layexception,

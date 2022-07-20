@@ -14,6 +14,15 @@ export const attributes: DocumentAttribute[] = [
     default: '-',
     value: '',
   },
+  {
+    name: 'replaceFields',
+    description: '自定义数据key名,可配置项为`label`,`value`,`children`,用法详见上面案例',
+    type: '-',
+    default: '-',
+    value: '',
+  },
+  { name: 'allow-clear', description: '默认slot提供清空功能，与lay-input保持一致', type: '-', default: '-', value: '' },
+  { name: 'size', description: '尺寸参数，默认 md', type: '-', default: '-', value: '`lg` `md` `sm` `xs`' },
 ];
 
 export const events: DocumentEvent[] = [{ name: 'change', description: '选中后数据改变的回调', parameter: '' }];

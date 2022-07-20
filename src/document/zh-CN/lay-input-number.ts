@@ -21,8 +21,8 @@ export const attributes: DocumentAttribute[] = [
     name: 'size',
     description: '尺寸, 可选值`md` / `sm` / `xs`',
     type: '`string`',
-    default: '默认为最大尺寸',
-    value: '-',
+    default: '默认 md',
+    value: '`lg` `md` `sm` `xs`',
   },
 ];
 

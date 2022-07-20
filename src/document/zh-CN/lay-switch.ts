@@ -11,6 +11,7 @@ export const attributes: DocumentAttribute[] = [
   { name: 'unswitch-text', description: '禁用描述', type: '-', default: '-', value: '`禁用`' },
   { name: 'onswitch-value', description: '启用值', type: '-', default: '-', value: '`true`' },
   { name: 'unswitch-value', description: '禁用值', type: '-', default: '-', value: '`false`' },
+  { name: 'size', description: '尺寸', type: '-', default: '-', value: '`lg` `md` `sm` `xs`' },
 ];
 
 export const events: DocumentEvent[] = [{ name: 'change', description: '切换事件', parameter: 'val : 当前值' }];

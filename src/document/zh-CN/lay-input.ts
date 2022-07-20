@@ -14,6 +14,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'allow-clear', description: '允许清空 allow-clear', type: '-', default: '-', value: '`true` `false`' },
   { name: 'prefix-icon', description: '前置图标', type: '-', default: '-', value: '--' },
   { name: 'suffix-icon', description: '后置图标', type: '-', default: '-', value: '--' },
+  { name: 'password', description: '密码框', type: '-', default: '-', value: '--' },
+  { name: 'size', description: '尺寸', type: '-', default: '-', value: '`lg` `md` `sm` `xs`，默认`md`' },
 ];
 
 export const events: DocumentEvent[] = [
@@ -27,6 +29,8 @@ export const events: DocumentEvent[] = [
 export const slots: DocumentSlot[] = [
   { name: 'prefix', description: '输入框前置内容' },
   { name: 'suffix', description: '输入框后置内容' },
+  { name: 'prepend', description: '输入框前置内容' },
+  { name: 'append', description: '输入框后置内容' },
 ];
 
 export const docLink: string = 'input';

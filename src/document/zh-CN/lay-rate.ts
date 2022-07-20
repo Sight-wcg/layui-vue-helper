@@ -11,7 +11,7 @@ export const attributes: DocumentAttribute[] = [
   { name: 'half', description: '设定组件是否可以选择半星', type: '`boolean`', default: 'false', value: '' },
   { name: 'text', description: '是否显示评分对应的内容', type: '`boolean`', default: 'false', value: '' },
   { name: 'is-block', description: '评分是否显示为快元素', type: '`boolean`', default: 'false', value: '' },
-  { name: 'has-clear', description: '评分是否需要清除功能', type: '`boolean`', default: 'false', value: '' },
+  { name: 'allow-clear', description: '评分是否需要清除功能', type: '`boolean`', default: 'false', value: '' },
   {
     name: 'clear-icon',
     description: '评分清除功能使用的图标`class`',

@@ -41,6 +41,7 @@ export const attributes: DocumentAttribute[] = [
     default: '`block` `inline`',
     value: '`block`',
   },
+  { name: 'label-width', description: '子项前边描述值的宽度', type: '`string` `number`', default: '-', value: '`95`' },
 ];
 
 export const methods: DocumentMethod[] = [

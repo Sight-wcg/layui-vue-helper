@@ -11,7 +11,11 @@ export const attributes: DocumentAttribute[] = [
   { name: 'height', description: '左右盒子高度', type: '-', default: '-', value: '`360px`' },
 ];
 
-export const slots: DocumentSlot[] = [{ name: 'item', description: '列表项' }];
+export const slots: DocumentSlot[] = [
+  { name: 'item', description: '列表项' },
+  { name: 'leftFooter', description: '左侧盒子底部内容' },
+  { name: 'rightFooter', description: '右侧盒子底部内容' },
+];
 
 export const docLink: string = 'transfer';
 

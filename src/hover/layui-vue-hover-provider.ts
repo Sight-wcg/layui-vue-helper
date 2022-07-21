@@ -158,9 +158,8 @@ export class LayuiHoverProvier implements HoverProvider {
     const language = config?.language || ExtensionLanguage.cn
 
     const kebabCaseTag = toKebabCase(tag?.text)
-    const kebabCaseAttr = toKebabCase(attr)
-
-    return this.createHoverInstance(language, kebabCaseTag, kebabCaseAttr, range)
+   // const kebabCaseAttr = toKebabCase(attr)
+    return this.createHoverInstance(language, kebabCaseTag, attr, range)
   }
 
   /**

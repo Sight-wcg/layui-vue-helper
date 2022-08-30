@@ -21,6 +21,13 @@ export const attributes: DocumentAttribute[] = [
   },
   { name: 'autoplay', description: '自动播放', type: '`boolean`', default: '`true`', value: '`true` `false`' },
   { name: 'interval', description: '轮播间隔', type: '`number`', default: '`3000`', value: '--' },
+  {
+    name: 'pauseOnHover',
+    description: '鼠标悬停时暂停播放',
+    type: '`boolean`',
+    default: '`true`',
+    value: '`true` `false`',
+  },
 ];
 
 export const events: DocumentEvent[] = [{ name: 'change', description: '切换回调', parameter: 'id' }];

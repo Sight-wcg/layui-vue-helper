@@ -3,11 +3,11 @@ import { DocumentAttribute } from '../../shared/types';
 import { DocumentSlot } from '../../shared/types';
 
 export const attributes: DocumentAttribute[] = [
-  { name: 'type', description: '类型', type: 'string', default: '-', value: '`dot` `rim`' },
+  { name: 'type', description: '类型', type: '`string`', default: '-', value: '`dot` `rim`' },
   {
     name: 'theme',
     description: '主题',
-    type: 'string',
+    type: '`string`',
     default: '-',
     value: '`orange` `green` `cyan` `blue` `black` `gray`',
   },

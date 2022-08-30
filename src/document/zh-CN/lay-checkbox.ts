@@ -3,13 +3,12 @@ import { DocumentAttribute } from '../../shared/types';
 import { DocumentEvent } from '../../shared/types';
 
 export const attributes: DocumentAttribute[] = [
-  { name: 'name', description: '原始属性 name', type: '-', default: '-', value: '--' },
-  { name: 'skin', description: '主题', type: '-', default: '-', value: '--' },
-  { name: 'label', description: '当前显示的值', type: '-', default: '-', value: '--' },
-  { name: 'v-model', description: '是否选中', type: '-', default: '-', value: '`true` `false`' },
-  { name: 'change', description: '切换事件', type: '-', default: '-', value: 'isChecked : 当前状态' },
-  { name: 'is-indeterminate', description: '半选', type: '-', default: '-', value: '--' },
-  { name: 'size', description: '尺寸', type: '-', default: '-', value: '`lg` `md` `sm` `xs`' },
+  { name: 'name', description: '原始属性 name', type: '`string`', default: '-', value: '--' },
+  { name: 'skin', description: '主题', type: '`string`', default: '-', value: '-' },
+  { name: 'label', description: '当前显示的值', type: '`string`', default: '-', value: '-' },
+  { name: 'v-model', description: '是否选中', type: '`boolean`', default: '`false`', value: '`true` `false`' },
+  { name: 'is-indeterminate', description: '半选', type: '`boolean`', default: '`false`', value: '`true` `false`' },
+  { name: 'size', description: '尺寸', type: '`string`', default: '`md`', value: '`lg` `md` `sm` `xs`' },
 ];
 
 export const events: DocumentEvent[] = [{ name: 'change', description: '切换事件', parameter: 'isChecked : 当前状态' }];

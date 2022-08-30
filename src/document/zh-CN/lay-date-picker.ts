@@ -16,6 +16,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'readonly', description: '只读', type: '`boolean`', default: 'false', value: '—' },
   { name: 'allowClear', description: '允许清空', type: '`boolean`', default: 'true', value: '—' },
   { name: 'size', description: '尺寸', type: '`string`', default: '`lg` `md` `sm` `xs`', value: '`md`' },
+  { name: 'prefix-icon', description: '前置图标', type: '`string`', default: '`layui-icon-date`', value: '内置图标集' },
+  { name: 'suffix-icon', description: '后置图标', type: '`string`', default: '--', value: '内置图标集' },
 ];
 
 export const docLink: string = 'datePicker';

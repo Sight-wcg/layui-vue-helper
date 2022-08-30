@@ -5,20 +5,26 @@ import { DocumentSlot } from '../../shared/types';
 export const attributes: DocumentAttribute[] = [
   {
     name: 'trigger',
-    description: '触发方式,类型 `string` 或 trigger 数组,默认 hover',
-    type: '-',
-    default: '-',
+    description: '触发方式,类型 `string` 或 trigger 数组',
+    type: '`strine`',
+    default: '`click`',
     value: '`click` `hover` `focus` `contextMenu`',
   },
-  { name: 'disabled', description: '是否禁用触发', type: '-', default: '-', value: '`true` `false`' },
+  { name: 'disabled', description: '是否禁用触发', type: '`boolean`', default: '`false`', value: '`true` `false`' },
   {
     name: 'placement',
-    description: '下拉面板位置,默认 right-top',
-    type: '-',
-    default: '-',
-    value: '`top` `bottom` `right` `left` `*-left` `*-right` `*-top` `*-bottom`',
+    description: '下拉面板位置',
+    type: '`string`',
+    default: '`bottom`',
+    value: '`top` `bottom` `right` `left` `*-start` `*-end`',
   },
-  { name: 'contentOffset', description: '下拉面板距离触发器的偏移距离，默认 2', type: '-', default: '-', value: '-' },
+  {
+    name: 'contentOffset',
+    description: '下拉面板距离触发器的偏移距离，默认 2',
+    type: '`string`',
+    default: '2px',
+    value: '-',
+  },
 ];
 
 export const slots: DocumentSlot[] = [

@@ -508,6 +508,11 @@
     ],
     "description": "layui-vue骨架屏"
   },
+  "layui-vue间距": {
+    "prefix": "lay-space",
+    "body": ["<lay-space></lay-space>"],
+    "description": "layui-vue间距"
+  },
   "layui-vue菜单": {
     "prefix": "lay-menu",
     "body": [

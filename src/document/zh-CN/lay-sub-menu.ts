@@ -3,7 +3,7 @@ import { DocumentAttribute } from '../../shared/types';
 import { DocumentSlot } from '../../shared/types';
 
 export const attributes: DocumentAttribute[] = [
-  { name: 'title', description: '菜单标题', type: '-', default: '-', value: '--' },
+  { name: 'title', description: '菜单标题', type: 'string', default: '-', value: '--' },
 ];
 
 export const slots: DocumentSlot[] = [

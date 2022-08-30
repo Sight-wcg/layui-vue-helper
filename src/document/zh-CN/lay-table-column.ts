@@ -14,6 +14,9 @@ export const slots: DocumentSlot[] = [
   { name: 'totalRow', description: '开启列值统计' },
   { name: 'type', description: '列类型' },
   { name: 'hide', description: '隐藏列' },
+  { name: 'fixed', description: '列固定' },
+  { name: 'type', description: '列类型' },
+  { name: 'children', description: '表头分组' },
 ];
 
 export const docLink: string = 'table';

@@ -20,7 +20,7 @@ export const attributes: DocumentAttribute[] = [
   {
     name: 'easingFn',
     description: '动画类型',
-    type: '`Array`  `Function` `string`',
+    type: '`Array` `Function` `string`',
     default: '`easeInOutCubic`',
     value: '—',
   },

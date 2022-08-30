@@ -12,6 +12,7 @@ export const slots: DocumentSlot[] = [
   { name: 'header', description: '头部插槽' },
   { name: 'body', description: '内容插槽' },
   { name: 'extra', description: '扩展插槽' },
+  { name: 'footer', description: '扩展插槽' },
 ];
 
 export const docLink: string = 'card';

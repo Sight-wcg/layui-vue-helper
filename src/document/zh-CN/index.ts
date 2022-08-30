@@ -51,6 +51,7 @@ import layselectoption from './lay-select-option';
 import layselect from './lay-select';
 import layskeleton from './lay-skeleton';
 import layslider from './lay-slider';
+import layspace from './lay-space';
 import laysplitpanelitem from './lay-split-panel-item';
 import laysplitpanel from './lay-split-panel';
 import laystepitem from './lay-step-item';
@@ -124,6 +125,7 @@ export default {
   'lay-select': layselect,
   'lay-skeleton': layskeleton,
   'lay-slider': layslider,
+  'lay-space': layspace,
   'lay-split-panel-item': laysplitpanelitem,
   'lay-split-panel': laysplitpanel,
   'lay-step-item': laystepitem,

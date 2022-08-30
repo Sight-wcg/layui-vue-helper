@@ -14,11 +14,13 @@ export const attributes: DocumentAttribute[] = [
   { name: 'showSkip', description: '显示跳转', type: '-', default: '-', value: '`false`' },
   { name: 'pages', description: '显示切页按钮数量', type: '-', default: '-', value: '`10`' },
   { name: 'limits', description: '切换每页数量的选择项', type: '-', default: '-', value: '`[10,20,30,40,50]`' },
+  { name: 'theme', description: '主题色', type: '-', default: '-', value: '`green`' },
 ];
 
 export const events: DocumentEvent[] = [
-  { name: 'jump', description: '切换回调', parameter: '{ current: 当前页面 }' },
-  { name: 'limit', description: '每页数量变化', parameter: '变化后的值' },
+  { name: 'jump', description: '切换回调,已废弃', parameter: '{ current: 当前页面 }' },
+  { name: 'limit', description: '每页数量变化，已废弃', parameter: '变化后的值' },
+  { name: 'change', description: '分页事件', parameter: '{ current: 当前页码, limit: 每页数量 }' },
 ];
 
 export const slots: DocumentSlot[] = [

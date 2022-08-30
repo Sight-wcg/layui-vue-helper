@@ -1,6 +1,7 @@
 import { MarkdownString } from 'vscode'
 import { ExtensionLanguage } from './enum'
 import { DocumentAttribute, BaseDocument, DocumentMethod, DocumentScopedSlot, DocumentSlot } from './types'
+import { toKebabCase, camelCase } from "./util"
 
 
 export class HoverDocumentGenerator {
@@ -40,7 +41,7 @@ export class HoverDocumentGenerator {
       }
       markdownString.appendMarkdown('|:---|:---|:---|:---|:---|\r');
     }
-    if (attribute.length === 0) {
+    if (tag === toKebabCase(attribute) || attribute.length === 0) {
       // 属性 和标签一样 显示全部
       attributes.forEach((row: DocumentAttribute) => {
         markdownString.appendMarkdown(
@@ -50,12 +51,13 @@ export class HoverDocumentGenerator {
       });
     } else {
       // 属性和标签不一样 显示标签下的某个属性的信息
-      const row = attributes.find((row: DocumentAttribute) => row.name === attribute);
+      // 文档容错处理, 同时查找驼峰和短横线分割属性   
+      const row = attributes.find((row: DocumentAttribute) => (row.name === attribute || row.name === toKebabCase(attribute) || row.name === camelCase(attribute)));
       if (row) {
         //markdownString.appendMarkdown(`|${row.name}|${row.description}|${row.type}|${row.value}|${row.default}|\r`);
-        markdownString = new MarkdownString('',true)
-        markdownString.appendMarkdown(`${tag} 属性: <span style="color:#79B8FF;">${ row.name }</span> \r`)
-        markdownString.appendMarkdown('**********\r')
+        markdownString = new MarkdownString('', true);
+        markdownString.appendMarkdown(`${tag} 属性: <span style="color:#79B8FF;">${row.name}</span> \r`);
+        markdownString.appendMarkdown('**********\r');
         markdownString.appendMarkdown(`描述: ${row.description}<br>`);
         markdownString.appendMarkdown(`类型: ${row.type}<br>`);
         markdownString.appendMarkdown(`默认值: ${row.default}<br>`);

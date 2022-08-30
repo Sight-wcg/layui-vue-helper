@@ -154,12 +154,13 @@ export class LayuiHoverProvier implements HoverProvider {
    * @param range 区域
    */
   getHoverInstance(tag: TagObject | undefined, attr: string, range: Range) {
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper')
-    const language = config?.language || ExtensionLanguage.cn
+    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper');
+    const language = config?.language || ExtensionLanguage.cn;
 
-    const kebabCaseTag = toKebabCase(tag?.text)
-   // const kebabCaseAttr = toKebabCase(attr)
-    return this.createHoverInstance(language, kebabCaseTag, attr, range)
+    const kebabCaseTag = toKebabCase(tag?.text);
+    // 文档中属性 kebabCase 和 camelCase 命名混杂, 此处不做转换, 在 hover-doc-generate 工具类中做兼容处理
+    // const kebabCaseAttr = toKebabCase(attr)
+    return this.createHoverInstance(language, kebabCaseTag, attr, range);
   }
 
   /**

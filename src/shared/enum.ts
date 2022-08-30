@@ -3,6 +3,12 @@ export enum ExtensionLanguage {
   en = 'en-US'
 }
 
+export enum ExtensionAttrCase {
+  kebabCase = 'kebab-case',
+  camelCase = 'camelCase'
+}
+
 export interface ExtensionConfigutation {
-  language: ExtensionLanguage
+  language: ExtensionLanguage;
+  attrCase: ExtensionAttrCase;
 }

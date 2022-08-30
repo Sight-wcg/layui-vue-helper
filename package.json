@@ -66,10 +66,19 @@
         "layui-vue-helper.language": {
           "type": "string",
           "default": "zh-CN",
-          "description": "Document Language of Layui Vue",
+          "description": "Document language of Layui Vue",
           "enum": [
             "zh-CN",
             "en-US"
+          ]
+        },
+        "layui-vue-helper.attrCase": {
+          "type": "string",
+          "default": "kebab-case",
+          "description": "Attributes use kebab-case or camelCase",
+          "enum": [
+            "kebab-case",
+            "camelCase"
           ]
         }
       }

@@ -3,9 +3,9 @@ import { DocumentAttribute } from '../../shared/types';
 import { DocumentSlot } from '../../shared/types';
 
 export const attributes: DocumentAttribute[] = [
-  { name: 'id', description: '唯一标识', type: '-', default: '-', value: '--' },
-  { name: 'title', description: '头部标题,支持渲染函数', type: '-', default: '-', value: '--' },
-  { name: 'closable', description: '允许关闭', type: '-', default: '-', value: '--' },
+  { name: 'id', description: '唯一标识', type: '`string`', default: '-', value: '-' },
+  { name: 'title', description: '头部标题,支持渲染函数', type: '`string` `vnode`', default: '-', value: '-' },
+  { name: 'closable', description: '允许关闭', type: '`boolean`', default: '`false`', value: '`true` `false`' },
 ];
 
 export const slots: DocumentSlot[] = [{ name: 'title', description: '头部标题' }];

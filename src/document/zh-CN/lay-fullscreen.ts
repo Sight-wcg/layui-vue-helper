@@ -9,7 +9,7 @@ export const attributes: DocumentAttribute[] = [
     name: 'immersive',
     description: '可选，全屏模式，`false`时浏览器窗口内全屏',
     type: '`boolean`',
-    default: 'true',
+    default: '`true`',
     value: '`true` `false`',
   },
   {

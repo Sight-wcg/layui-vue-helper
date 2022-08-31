@@ -3,12 +3,12 @@ import { DocumentAttribute } from '../../shared/types';
 import { DocumentEvent } from '../../shared/types';
 
 export const attributes: DocumentAttribute[] = [
-  { name: 'name', description: '原始属性 name', type: '-', default: '-', value: '--' },
-  { name: 'placeholder', description: '提示信息', type: '-', default: '-', value: '--' },
-  { name: 'disabled', description: '禁用', type: '-', default: '-', value: '`true` `false`' },
-  { name: 'v-model', description: '值', type: '-', default: '-', value: '--' },
-  { name: 'show-count', description: '显示字数', type: '-', default: '-', value: '--' },
-  { name: 'allow-clear', description: '允许清空', type: '-', default: '-', value: '--' },
+  { name: 'name', description: '原始属性 name', type: '`string`', default: '-', value: '-' },
+  { name: 'placeholder', description: '提示信息', type: '`string`', default: '-', value: '-' },
+  { name: 'disabled', description: '禁用', type: '`boolean`', default: '`false`', value: '`true` `false`' },
+  { name: 'v-model', description: '值', type: '`string`', default: '-', value: '-' },
+  { name: 'show-count', description: '显示字数', type: '`boolean`', default: '`false`', value: '`true` `false`' },
+  { name: 'allow-clear', description: '允许清空', type: '`boolean`', default: '`false`', value: '`true` `false`' },
 ];
 
 export const events: DocumentEvent[] = [

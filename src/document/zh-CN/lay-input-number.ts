@@ -17,13 +17,7 @@ export const attributes: DocumentAttribute[] = [
   },
   { name: 'min', description: '最小可输入的数', type: '`number`', default: '--', value: '-' },
   { name: 'max', description: '最大可输入的数', type: '`number`', default: '--', value: '-' },
-  {
-    name: 'size',
-    description: '尺寸, 可选值`md` / `sm` / `xs`',
-    type: '`string`',
-    default: '默认 md',
-    value: '`lg` `md` `sm` `xs`',
-  },
+  { name: 'size', description: '尺寸', type: '`string`', default: '默认 md', value: '`lg` `md` `sm` `xs`' },
 ];
 
 export const events: DocumentEvent[] = [

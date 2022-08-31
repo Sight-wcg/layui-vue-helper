@@ -4,7 +4,7 @@ import { DocumentSlot } from '../../shared/types';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'label', description: '标签值(`必填`)', type: '`string`', default: '-', value: '-' },
-  { name: 'value', description: '值', type: '`string` / `number`', default: '-', value: '-' },
+  { name: 'value', description: '值', type: '`string` `number`', default: '-', value: '-' },
   {
     name: 'keyword',
     description: '用于匹配关键词的数据，传入文本+拼音可以支持拼音搜索',
@@ -12,7 +12,7 @@ export const attributes: DocumentAttribute[] = [
     default: '-',
     value: '-',
   },
-  { name: 'disabled', description: '是否禁用', type: '`boolean`', default: '`true` `false`', value: '`false`' },
+  { name: 'disabled', description: '是否禁用', type: '`boolean`', default: '`false`', value: '`true` `false`' },
 ];
 
 export const slots: DocumentSlot[] = [{ name: 'default', description: '默认(`label`)' }];

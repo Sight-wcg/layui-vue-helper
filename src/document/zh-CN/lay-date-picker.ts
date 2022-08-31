@@ -12,7 +12,7 @@ export const attributes: DocumentAttribute[] = [
   },
   { name: 'disabled', description: '是否禁止修改', type: '`boolean`', default: 'false', value: '—' },
   { name: 'simple', description: '一次性选择，无需点击确认按钮', type: '`boolean`', default: 'false', value: '—' },
-  { name: 'placeholder', description: '设置提示信息', type: '-', default: '-', value: '-' },
+  { name: 'placeholder', description: '设置提示信息', type: '`string`', default: '-', value: '-' },
   { name: 'readonly', description: '只读', type: '`boolean`', default: 'false', value: '—' },
   { name: 'allowClear', description: '允许清空', type: '`boolean`', default: 'true', value: '—' },
   { name: 'size', description: '尺寸', type: '`string`', default: '`lg` `md` `sm` `xs`', value: '`md`' },

@@ -3,9 +3,21 @@ import { DocumentAttribute } from '../../shared/types';
 import { DocumentEvent } from '../../shared/types';
 
 export const attributes: DocumentAttribute[] = [
-  { name: 'openKeys', description: '默认打开的折叠面板子项key', type: '`string`/`array`', default: '--', value: '' },
-  { name: 'accordion', description: '是否开启手风琴效果', type: '`boolean`', default: '`false`', value: '' },
-  { name: 'collapse-transition', description: '折叠动画', type: '`true` `false`', default: '`true`', value: '' },
+  { name: 'openKeys', description: '默认打开的折叠面板子项 key', type: '`string` `array`', default: '--', value: '-' },
+  {
+    name: 'accordion',
+    description: '是否开启手风琴效果',
+    type: '`boolean`',
+    default: '`false`',
+    value: '`true` `false`',
+  },
+  {
+    name: 'collapse-transition',
+    description: '折叠动画',
+    type: '`boolean`',
+    default: '`true`',
+    value: '`true` `false`',
+  },
 ];
 
 export const events: DocumentEvent[] = [

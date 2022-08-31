@@ -2,7 +2,13 @@ import { LayDocument } from '../../shared/types';
 import { DocumentAttribute } from '../../shared/types';
 
 export const attributes: DocumentAttribute[] = [
-  { name: 'direction', description: '排列方向', type: '-', default: '-', value: '`horizontal` `vertical`' },
+  {
+    name: 'direction',
+    description: '排列方向',
+    type: '`string`',
+    default: '`horizontal`',
+    value: '`horizontal` `vertical`',
+  },
 ];
 
 export const docLink: string = 'timeline';

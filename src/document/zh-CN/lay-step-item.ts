@@ -10,8 +10,8 @@ export const attributes: DocumentAttribute[] = [
     name: 'status',
     description: '状态',
     type: 'string',
-    default: '`primary` `success` `fail` `warning`',
-    value: '`primary`',
+    default: '`primary`',
+    value: '`primary` `success` `fail` `warning`',
   },
 ];
 

@@ -13,6 +13,7 @@ import laycheckbox from './lay-checkbox';
 import laycol from './lay-col';
 import laycollapseitem from './lay-collapse-item';
 import laycollapse from './lay-collapse';
+import layconfigprovider from './lay-configprovider';
 import laycontainer from './lay-container';
 import laycountup from './lay-count-up';
 import laydatepicker from './lay-date-picker';
@@ -87,6 +88,7 @@ export default {
   'lay-col': laycol,
   'lay-collapse-item': laycollapseitem,
   'lay-collapse': laycollapse,
+  'lay-configprovider': layconfigprovider,
   'lay-container': laycontainer,
   'lay-count-up': laycountup,
   'lay-date-picker': laydatepicker,

@@ -22,7 +22,7 @@ export const attributes: DocumentAttribute[] = [
     description: '动画类型',
     type: '`Array` `Function` `string`',
     default: '`easeInOutCubic`',
-    value: '—',
+    value: '`easeInCubic` `easeOutCubic` `easeInOutCubic`',
   },
   { name: 'duration', description: '动画持续时间,单位: ms', type: 'number', default: '`2000`', value: '—' },
   { name: 'prefix', description: '前缀', type: 'string', default: '—', value: '—' },

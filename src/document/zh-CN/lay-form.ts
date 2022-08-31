@@ -49,7 +49,7 @@ export const methods: DocumentMethod[] = [
   {
     name: 'validate',
     description:
-      '表单校验; <br>如果没有`callback`回调，会返回`Promise`,  <br> `Promise`参数为{`isValidate`, `model`, `errors`}<br> 参数具体描述请看上面表单`submit`提交事件',
+      '表单校验; <br>如果没有`callback`回调，会返回`Promise`, <br> `Promise`参数为{`isValidate`, `model`, `errors`}<br> 参数具体描述请看上面表单`submit`提交事件',
     parameter:
       '(`fields` `[可选]`, `callback` `[可选]`)<br><br> `fields`: (`string` / `string[]` / `function`)<br>单独校验的字段，<br>该字段如果为`function`, <br>则认为`callback`入参，校验全部字段;<br><br> `callback`: (`function`)校验之后的回调，<br>回调参数为(`isValidate`, `model`, `errors`)；<br>参数具体描述请看上面表单`submit`提交事件',
   },

@@ -17,6 +17,14 @@ export const toKebabCase = (str: string | undefined) => {
   return temp
 }
 
-export function camelCase(str: string) {
+export function toCamelCase(str: string) {
   return str.replace(/-(\w)/g, (_, c) => (c ? c.toUpperCase() : ''));
+}
+
+export function toPascalCase(str: string) {
+  return capitalize(toCamelCase(str));
+}
+
+export function capitalize(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }

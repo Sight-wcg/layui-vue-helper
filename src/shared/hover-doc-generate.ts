@@ -1,7 +1,7 @@
 import { MarkdownString } from 'vscode'
 import { ExtensionLanguage } from './enum'
 import { DocumentAttribute, BaseDocument, DocumentMethod, DocumentScopedSlot, DocumentSlot } from './types'
-import { toKebabCase, camelCase } from "./util"
+import { toKebabCase, toCamelCase } from "./util"
 
 
 export class HoverDocumentGenerator {
@@ -52,7 +52,7 @@ export class HoverDocumentGenerator {
     } else {
       // 属性和标签不一样 显示标签下的某个属性的信息
       // 文档容错处理, 同时查找驼峰和短横线分割属性   
-      const row = attributes.find((row: DocumentAttribute) => (row.name === attribute || row.name === toKebabCase(attribute) || row.name === camelCase(attribute)));
+      const row = attributes.find((row: DocumentAttribute) => (row.name === attribute || row.name === toKebabCase(attribute) || row.name === toCamelCase(attribute)));
       if (row) {
         //markdownString.appendMarkdown(`|${row.name}|${row.description}|${row.type}|${row.value}|${row.default}|\r`);
         markdownString = new MarkdownString('', true);

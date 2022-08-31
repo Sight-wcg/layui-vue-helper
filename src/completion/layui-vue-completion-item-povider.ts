@@ -13,9 +13,9 @@ import {
   SnippetString,
 } from 'vscode';
 import { TagObject, DocumentAttribute, DocumentEvent } from '../shared/types';
-import { ExtensionLanguage, ExtensionConfigutation, ExtensionAttrCase } from '../shared/enum';
+import { ExtensionLanguage, ExtensionConfigutation, ExtensionAttrNameCase, ExtensionTagNameCase } from '../shared/enum';
 import { localDocument } from '../document';
-import { toKebabCase, camelCase } from '../shared/util';
+import { toKebabCase, toCamelCase, toPascalCase } from '../shared/util';
 
 export class LayuiCompletionItemProvider implements CompletionItemProvider<CompletionItem> {
   private _document!: TextDocument;
@@ -154,7 +154,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
     const attributes: DocumentAttribute[] = document[tag].attributes || [];
     const attribute: DocumentAttribute | undefined = attributes.find(
       (attribute) =>
-        attribute.name === attr || attribute.name === toKebabCase(attr) || attribute.name === camelCase(attr)
+        attribute.name === attr || attribute.name === toKebabCase(attr) || attribute.name === toCamelCase(attr)
     );
     if (!attribute) {
       return [];
@@ -231,7 +231,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
     let completionItems: CompletionItem[] = [];
     const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper');
     const language = config?.language || ExtensionLanguage.cn;
-    const attrCase = config?.attrCase || ExtensionAttrCase.kebabCase;
+    const attrNameCase = config?.completion?.preferredAttrNameCase || ExtensionAttrNameCase.kebabCase; 
     const document: Record<string, any> = localDocument[language];
     const preText = this.getTextBeforePosition(this._position);
     const prefix = preText.replace(/.*[\s@:]/g, '');
@@ -243,8 +243,9 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
       const startPos = new Position(this._position.line, start);
       const endPos = new Position(this._position.line, end);
       const range = new Range(startPos, endPos);
-      const attrName =
-        attrCase === ExtensionAttrCase.kebabCase ? toKebabCase(attribute.name) : camelCase(attribute.name);
+      const attrName = attrNameCase === ExtensionAttrNameCase.kebabCase 
+        ? toKebabCase(attribute.name) 
+        : toCamelCase(attribute.name);
       completionItems.push({
         label: `${attrName}`,
         sortText: `0${attrName}`,
@@ -274,6 +275,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
     let completionItems: CompletionItem[] = [];
     const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper');
     const language = config?.language || ExtensionLanguage.cn;
+    const tagNameCase = config?.completion?.preferredTagNameCase || ExtensionTagNameCase.kebabCase; 
     const preText = this.getTextBeforePosition(this._position);
     const document: Record<string, any> = localDocument[language];
     Object.keys(document).forEach((key) => {
@@ -282,21 +284,21 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
       const startPos = new Position(this._position.line, start);
       const endPos = new Position(this._position.line, end);
       const range = new Range(startPos, endPos);
+      const tagName = tagNameCase === ExtensionTagNameCase.kebabCase ? toKebabCase(key) : toPascalCase(key);
       completionItems.push({
-        label: `${key}`,
-        sortText: `0${key}`,
+        label: `${tagName}`,
+        sortText: `0${tagName}`,
         detail: 'LayuiVue Tag',
         kind: CompletionItemKind.Value,
         insertText: new SnippetString()
-          .appendText(`${key}`)
+          .appendText(`${tagName}`)
           .appendTabstop()
           .appendText('>')
           .appendTabstop()
-          .appendText(`</${key}>`),
+          .appendText(`</${tagName}>`),
         range,
       });
     });
-    console.log('tag', completionItems);
 
     return completionItems;
   }

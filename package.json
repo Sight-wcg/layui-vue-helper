@@ -2,7 +2,7 @@
   "name": "layui-vue-helper",
   "displayName": "layui-vue-helper",
   "description": "layui-vue 辅助插件",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "license": "MIT",
   "publisher": "morning-star",
   "author": {
@@ -66,20 +66,37 @@
         "layui-vue-helper.language": {
           "type": "string",
           "default": "zh-CN",
-          "description": "Document language of Layui Vue",
+          "description": "Document language of Layui Vue.",
           "enum": [
             "zh-CN",
             "en-US"
           ]
         },
-        "layui-vue-helper.attrCase": {
+        "layui-vue-helper.completion.preferredTagNameCase": {
           "type": "string",
+          "enum": [
+            "kebab-case",
+            "PascalCase"
+          ],
+          "enumDescriptions": [
+            "<kebab-case>",
+            "<PascalCase>"
+          ],
           "default": "kebab-case",
-          "description": "Attributes use kebab-case or camelCase",
+          "description": "Preferred tag name case."
+        },
+        "layui-vue-helper.completion.preferredAttrNameCase": {
+          "type": "string",
           "enum": [
             "kebab-case",
             "camelCase"
-          ]
+          ],
+          "enumDescriptions": [
+            ":kebab-case=\"...\"",
+            ":camelCase=\"...\""
+          ],
+          "default": "kebab-case",
+          "description": "Preferred attr name case."
         }
       }
     }

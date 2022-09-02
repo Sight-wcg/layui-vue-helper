@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 import { LayuiCompletionItemProvider } from './completion/layui-vue-completion-item-povider'
 import { LayuiHoverProvier } from './hover/layui-vue-hover-provider'
+import { getWebViewContent } from './shared/util';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -49,6 +50,30 @@ export function activate(context: vscode.ExtensionContext) {
       ],
       new LayuiHoverProvier()
     )
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand('extension.layui-icon-doc', (uri) => {
+      const panel = vscode.window.createWebviewPanel('test webview', '演示', vscode.ViewColumn.Beside, {
+        enableScripts: true,
+        retainContextWhenHidden: false,
+      });
+      panel.webview.html = getWebViewContent(context, 'resources/layui-icon.html');
+      panel.webview.onDidReceiveMessage(
+        (message) => {
+          
+          const { command, text } = message;
+          if(command === "alert"){
+            console.log(message);
+            vscode.window.showInformationMessage(text);
+          }else if(command === "error"){
+            vscode.window.showErrorMessage(text);
+          }
+        },
+        undefined,
+        context.subscriptions
+      );
+    })
   );
 }
 

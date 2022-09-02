@@ -37,10 +37,17 @@
     "onLanguage:html",
     "onLanguage:javascript",
     "onLanguage:typescript",
-    "onLanguage:markdown"
+    "onLanguage:markdown",
+    "onCommand:extension.layui-icon-doc"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "extension.layui-icon-doc",
+        "title": "Open layui-icon-document"
+      }
+    ],
     "snippets": [
       {
         "language": "typescript",

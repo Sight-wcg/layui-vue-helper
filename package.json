@@ -45,7 +45,7 @@
     "commands": [
       {
         "command": "extension.layui-icon-doc",
-        "title": "Open layui-icon-document"
+        "title": "Open layui icon document"
       }
     ],
     "snippets": [

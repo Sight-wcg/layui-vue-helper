@@ -28,18 +28,24 @@ layui-vue-helper 是 Layui Vue 的开发增强工具，提供代码片段，自�
 | !lay-html-es| layui-vue-html-es 模板  |
 
 
-> **其它代码片段的触发词和 layui-vue 组件名一致**
-
 ### 自动补全
 
 * 按 `Ctrl+Space` (Windows, Linux) 或 `Cmd+Space` (macOS) 查看自动补全列表，目前只支持属性和事件补全
 * 支持 Vue 和 HTML 文件
+* `设置 -> 扩展 -> layui-vue-helper config`, 自定义 `Tag` `Attribute` 自动完成风格
 ![自动补全.gif](https://s2.loli.net/2022/06/20/LioZGshVlFQYyew.gif)
 
 ### 文档悬停提示
 
 * 移动光标到 layui-vue 的 tag 或 prop，显示悬浮文档。
 ![悬浮提示.gif](https://s2.loli.net/2022/06/20/iKT3gn7bSxVFByX.gif)
+
+### 图标文档
+
+* 按 `Ctrl + Shift + P`，打开命令面板，输入 `layui-icon`, 选择 `Open layui icon document`，打开图标文档
+* 支持点击复制图标
+
+### 
 
 ## 问题反馈
 
@@ -49,6 +55,4 @@ layui-vue-helper 是 Layui Vue 的开发增强工具，提供代码片段，自�
 
 * 支持 vscode 1.64.0 及以上版本 
 
-* Thanks [element-ui-helper](https://github.com/HULANG-BTB/element-ui-helper)
-
-**Enjoy!**
+* 感谢 [element-ui-helper](https://github.com/HULANG-BTB/element-ui-helper)

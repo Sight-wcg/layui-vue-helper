@@ -34,7 +34,9 @@ export class HoverDocumentGenerator {
       if (language === 'zh-CN') {
         markdownString.appendMarkdown(`**${tag} 属性** \r`);
         markdownString.appendMarkdown('**********\r');
-        markdownString.appendMarkdown('| 属性 | 说明 | 类型 | 可选值 | 默认值 |\r');
+        markdownString.appendMarkdown(
+          '| 属性 | 说明 | 类型 | 可选值 | 默认值|\r'
+        );
       } else {
         markdownString.appendMarkdown(`**${tag} Attributes** \r`);
         markdownString.appendMarkdown('| Attributes | Description | Type | Accepted Values | Default |\r');
@@ -344,7 +346,10 @@ export class HoverDocumentGenerator {
     if(links === 'layer'){
       links = 'modal'
     }
-    return ` [查看文档](${this.docsSite}${links})`;
+    if(links === 'icon'){
+      return ` [在线文档](${this.docsSite}${links}) &nbsp;&nbsp;&nbsp;[图标选择器](command:extension.layui-icon-doc)`;
+    }
+    return ` [在线文档](${this.docsSite}${links})`;
   }
 
   /**
@@ -367,6 +372,8 @@ export class HoverDocumentGenerator {
     language: ExtensionLanguage
   ): MarkdownString {
     let markdownString: MarkdownString = new MarkdownString('');
+    markdownString.isTrusted = true;
+    markdownString.supportHtml = true;
     markdownString.appendMarkdown(`${this.markdownDocsLink(document.docLink)}\r`)
     markdownString.appendMarkdown('**********\r');
     switch (key) {

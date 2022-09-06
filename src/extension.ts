@@ -54,7 +54,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand('extension.layui-icon-doc', (uri) => {
-      const panel = vscode.window.createWebviewPanel('test webview', '演示', vscode.ViewColumn.Beside, {
+      const panel = vscode.window.createWebviewPanel('webview', 'Layui Icon', vscode.ViewColumn.Beside, {
         enableScripts: true,
         retainContextWhenHidden: false,
       });
@@ -64,7 +64,6 @@ export function activate(context: vscode.ExtensionContext) {
           
           const { command, text } = message;
           if(command === "alert"){
-            console.log(message);
             vscode.window.showInformationMessage(text);
           }else if(command === "error"){
             vscode.window.showErrorMessage(text);

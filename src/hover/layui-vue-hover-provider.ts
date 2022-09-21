@@ -6,7 +6,7 @@ import { toKebabCase } from '../shared/util'
 import { ExtensionConfigutation, ExtensionLanguage } from '../shared/enum'
 import { TagObject, LayDocument } from '../shared/types'
 
-export class LayuiHoverProvier implements HoverProvider {
+export class LayuiHoverProvider implements HoverProvider {
   private _position!: Position
   private _document!: TextDocument
   private _token!: CancellationToken

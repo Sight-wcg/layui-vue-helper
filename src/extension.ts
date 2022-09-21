@@ -2,7 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import { LayuiCompletionItemProvider } from './completion/layui-vue-completion-item-povider'
-import { LayuiHoverProvier } from './hover/layui-vue-hover-provider'
+import { LayuiHoverProvider } from './hover/layui-vue-hover-provider'
 import { getWebViewContent } from './shared/util';
 
 // this method is called when your extension is activated
@@ -48,7 +48,7 @@ export function activate(context: vscode.ExtensionContext) {
           scheme: 'file',
         },
       ],
-      new LayuiHoverProvier()
+      new LayuiHoverProvider()
     )
   );
 

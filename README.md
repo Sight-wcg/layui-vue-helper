@@ -52,7 +52,7 @@ layui-vue-helper 是 Layui Vue 的开发增强工具，提供代码片段，自�
 
 ## 问题反馈
 
-如果您有任何问题或改进意见，可以通过 [issues](https://gitee.com/starsatdawn/layui-vue-helper/issues)反馈。
+如果您有任何问题或改进意见，可以通过 [issues](https://gitee.com/starsatdawn/layui-vue-helper/issues) 反馈。
 
 ## 更多信息
 

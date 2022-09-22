@@ -3,7 +3,7 @@ import { HoverProvider, TextDocument, Position, CancellationToken, ProviderResul
 import { localDocument } from '../document'
 import { HoverDocumentGenerator } from '../shared/hover-doc-generate'
 import { toKebabCase } from '../shared/util'
-import { ExtensionConfigutation, ExtensionLanguage } from '../shared/enum'
+import { ExtensionConfiguration, ExtensionLanguage } from '../shared/enum'
 import { TagObject, LayDocument } from '../shared/types'
 
 export class LayuiHoverProvider implements HoverProvider {
@@ -154,7 +154,7 @@ export class LayuiHoverProvider implements HoverProvider {
    * @param range 区域
    */
   getHoverInstance(tag: TagObject | undefined, attr: string, range: Range) {
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper');
+    const config = workspace.getConfiguration().get<ExtensionConfiguration>('layui-vue-helper');
     const language = config?.language || ExtensionLanguage.cn;
 
     const kebabCaseTag = toKebabCase(tag?.text);

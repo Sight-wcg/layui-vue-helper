@@ -13,7 +13,7 @@ export enum ExtensionTagNameCase {
   pascalCase = 'PascalCase'
 }
 
-export interface ExtensionConfigutation {
+export interface ExtensionConfiguration {
   language: ExtensionLanguage;
   completion: {
     preferredAttrNameCase: ExtensionAttrNameCase;

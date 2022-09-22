@@ -13,7 +13,7 @@ import {
   SnippetString,
 } from 'vscode';
 import { TagObject, DocumentAttribute, DocumentEvent } from '../shared/types';
-import { ExtensionLanguage, ExtensionConfigutation, ExtensionAttrNameCase, ExtensionTagNameCase } from '../shared/enum';
+import { ExtensionLanguage, ExtensionConfiguration, ExtensionAttrNameCase, ExtensionTagNameCase } from '../shared/enum';
 import { localDocument } from '../document';
 import { toKebabCase, toCamelCase, toPascalCase } from '../shared/util';
 
@@ -148,7 +148,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
    * @param attr 属性
    */
   getAttrValues(tag: string, attr: string): string[] {
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper');
+    const config = workspace.getConfiguration().get<ExtensionConfiguration>('layui-vue-helper');
     const language = config?.language || ExtensionLanguage.cn;
     const document: Record<string, any> = localDocument[language];
     const attributes: DocumentAttribute[] = document[tag].attributes || [];
@@ -196,7 +196,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
    */
   getEventCompletionItems(tag: string): CompletionItem[] {
     let completionItems: CompletionItem[] = [];
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper');
+    const config = workspace.getConfiguration().get<ExtensionConfiguration>('layui-vue-helper');
     const language = config?.language || ExtensionLanguage.cn;
     const document: Record<string, any> = localDocument[language];
     const preText = this.getTextBeforePosition(this._position);
@@ -229,7 +229,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
    */
   getAttrCompletionItems(tag: string): CompletionItem[] {
     let completionItems: CompletionItem[] = [];
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper');
+    const config = workspace.getConfiguration().get<ExtensionConfiguration>('layui-vue-helper');
     const language = config?.language || ExtensionLanguage.cn;
     const attrNameCase = config?.completion?.preferredAttrNameCase || ExtensionAttrNameCase.kebabCase; 
     const document: Record<string, any> = localDocument[language];
@@ -273,7 +273,7 @@ export class LayuiCompletionItemProvider implements CompletionItemProvider<Compl
    */
   getTagCompletionItems(tag: string): CompletionItem[] {
     let completionItems: CompletionItem[] = [];
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('layui-vue-helper');
+    const config = workspace.getConfiguration().get<ExtensionConfiguration>('layui-vue-helper');
     const language = config?.language || ExtensionLanguage.cn;
     const tagNameCase = config?.completion?.preferredTagNameCase || ExtensionTagNameCase.kebabCase; 
     const preText = this.getTextBeforePosition(this._position);

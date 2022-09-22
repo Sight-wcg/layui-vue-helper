@@ -1,3 +1,12 @@
+## [0.0.17-beta]
+
+- 同步 layui-vue 文档 v1.4.14
+- 修复 LayuiHoverProvider 拼写错误 by @阿森
+
+## [0.0.16-beta]
+
+- lay-icon 的悬浮文档下添加图标选择器快捷入口
+
 ## [0.0.14-beta]
 
 - 新增 layui-icon command, 提供离线图标文档，支持点击复制

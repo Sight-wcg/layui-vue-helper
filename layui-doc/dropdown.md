@@ -18,6 +18,9 @@
 | mouseEnterDelay     | mouseEnter 事件延迟触发的时间, trigger hover 有效 | `number`  | `150`    | -                                               |
 | mouseLeaveDelay     | mouseLeave 事件延迟触发的时间, trigger hover 有效 | `number`  | `150`    | -                                               |
 | focusDelay          | focus 事件延迟触发的时间, trigger focus 有效      | `number`  | `150`    | -                                               |
+| alignPoint          | 跟随鼠标                                          | `boolean` | `false`  | `true` `false`                                  |
+| contentClass        | 弹出内容的类名                                    | `string`  | -        | -                                               |
+| contentStyle        | 弹出内容的样式                                    | `string`  | -        | -                                               |
 
 ### Dropdown Slots
 
@@ -47,7 +50,7 @@
 | trigger       | 触发方式,类型 `string` 或 trigger 数组 | `strine`  | `click`  | `click` `hover` `focus` `contextMenu`           |
 | disabled      | 是否禁用触发                           | `boolean` | `false`  | `true` `false`                                  |
 | placement     | 下拉面板位置                           | `string`  | `bottom` | `top` `bottom` `right` `left` `*-start` `*-end` |
-| contentOffset | 下拉面板距离触发器的偏移距离，默认 2   | `string`    | 2px      | -                                               |
+| contentOffset | 下拉面板距离触发器的偏移距离，默认 2   | `string`  | 2px      | -                                               |
 
 ### Dropdown Sub Menu Slots
 

@@ -22,7 +22,7 @@
 | ------ | ---------------- | --------------------------- |
 | input  | 原生 input 事件  | (value : `string` `number`) |
 | change | 原生 change 事件 | (value : `string` `number`) |
-| foucs  | 原生 foucs 事件  | event : Event               |
+| focus  | 原生 focus 事件  | event : Event               |
 | blur   | 原生 blur 事件   | event : Event               |
 | clear  | 清空 事件        | --                          |
 

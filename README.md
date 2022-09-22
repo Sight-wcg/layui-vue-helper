@@ -1,6 +1,8 @@
 # layui-vue-helper
 
-layui-vue-helper 是 Layui Vue 的开发增强工具，提供代码片段，自动补全，悬浮提示功能
+layui-vue-helper 是 Layui Vue 的开发增强工具，提供代码片段，自动完成，悬浮文档功能
+
+> 本项目 fork 自 [element-ui-helper](https://github.com/HULANG-BTB/element-ui-helper)
 
 ## 主要功能
 
@@ -44,12 +46,13 @@ layui-vue-helper 是 Layui Vue 的开发增强工具，提供代码片段，自�
 
 * 按 `Ctrl + Shift + P`，打开命令面板，输入 `layui-icon`, 选择 `Open layui icon document`，打开图标文档
 * 支持点击复制图标
+![图标](https://s2.loli.net/2022/09/06/hsVgJcaWqAoZG1k.png)
 
 ### 
 
 ## 问题反馈
 
-如果您有任何问题或改进意见，可以通过 issues 反馈。
+如果您有任何问题或改进意见，可以通过 [issues](https://gitee.com/starsatdawn/layui-vue-helper/issues) 反馈。
 
 ## 更多信息
 

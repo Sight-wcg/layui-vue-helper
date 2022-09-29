@@ -23,6 +23,7 @@
 | -------- | --------------------- | ---------------- | ------- | -------------- |
 | id       | 唯一标识              | `string`         | -       | -              |
 | title    | 头部标题,支持渲染函数 | `string` `vnode` | -       | -              |
+| icon     | 前置图标              | `string` `vnode` | -       | -              |
 | closable | 允许关闭              | `boolean`        | `false` | `true` `false` |
 
 ### Tab Item Slots

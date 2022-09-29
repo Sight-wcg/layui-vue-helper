@@ -7,7 +7,7 @@ export const attributes: DocumentAttribute[] = [{"name":"columns","description":
 
 export const events: DocumentEvent[] = [{"name":"row","description":"行单击","parameter":"data : 当前行"},{"name":"row-double","description":"行双击","parameter":"data : 当前行"},{"name":"row-contextmenu","description":"行右击","parameter":"data : 当前行"},{"name":"change","description":"分页事件","parameter":"{ current: 当前页码, limit: 每页数量 }"}];
 
-export const slots: DocumentSlot[] = [{"name":"toolbar","description":"自定义工具栏"},{"name":"footer","description":"底部扩展"}];
+export const slots: DocumentSlot[] = [{"name":"toolbar","description":"自定义工具栏"},{"name":"header","description":"表格顶部插槽"},{"name":"footer","description":"底部扩展"}];
 
 export const docLink: string = 'table';
 

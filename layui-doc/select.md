@@ -1,22 +1,25 @@
 ### Select Attributes
 
-| 属性        | 描述               | 类型                      | 默认值   | 可选值         |
-| ----------- | ------------------ | ------------------------- | -------- | -------------- |
-| v-model     | 选中值             | `string` `number` `Array` | -        | -              |
-| name        | 原生 name 属性     | `string`                  | -        | -              |
-| placeholder | 默认空提示语       | `string`                  | `请选择` | -              |
-| disabled    | 是否禁用           | `boolean`                 | `false`  | `true` `false` |
-| showEmpty   | 是否增加空提示选项 | `boolean`                 | `true`   | `true` `false` |
-| multiple    | 是否为多选         | `boolean`                 | `false`  | `true` `false` |
-| create      | 是否允许创建       | `boolean`                 | `false`  | `true` `false` |
+| 属性                | 描述                       | 类型                      | 默认值   | 可选值         |
+| ------------------- | -------------------------- | ------------------------- | -------- | -------------- |
+| v-model             | 选中值                     | `string` `number` `Array` | -        | -              |
+| name                | 原生 name 属性             | `string`                  | -        | -              |
+| placeholder         | 默认空提示语               | `string`                  | `请选择` | -              |
+| disabled            | 是否禁用                   | `boolean`                 | `false`  | `true` `false` |
+| showEmpty           | 是否增加空提示选项         | `boolean`                 | `true`   | `true` `false` |
+| multiple            | 是否为多选                 | `boolean`                 | `false`  | `true` `false` |
+| create              | 是否允许创建(已移除,1.5.0) | `boolean`                 | `false`  | `true` `false` |
+| searchPlaceholder   | 搜索框占位                 | `string`                  | -        | -              |
+| minCollapsedNum     | 标签最小折叠数             | `number`                  | 0        | -              |
+| collapseTagsTooltip | 是否悬浮显示已折叠图标     | `boolean`                 | `false`  | `true` `false` |
 
 ### Select Events
 
-| 属性   | 描述                         | 接收值                  |
-| ------ | ---------------------------- | ----------------------- |
-| change | 切换事件                     | value                   |
-| search | 关键词变化事件               | 用户输入的关键词 string |
-| create | 允许创建情况下的创建回调事件 | 用户输入的关键词 string |
+| 属性   | 描述                                       | 接收值                  |
+| ------ | ------------------------------------------ | ----------------------- |
+| change | 切换事件                                   | value                   |
+| search | 关键词变化事件                             | 用户输入的关键词 string |
+| create | 允许创建情况下的创建回调事件(已移除,1.5.0) | 用户输入的关键词 string |
 
 ### Select Option Attributes
 

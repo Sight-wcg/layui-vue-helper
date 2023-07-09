@@ -2,7 +2,7 @@
 
 layui-vue-helper 是 Layui Vue 的开发增强工具，提供代码片段，自动完成，悬浮文档功能
 
-> 本项目 fork 自 [element-ui-helper](https://github.com/HULANG-BTB/element-ui-helper)
+> 由于官方仓库自动化生成 Json 文档的代码被删除，此项目停止维护
 
 ## 主要功能
 
